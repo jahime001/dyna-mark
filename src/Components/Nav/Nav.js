@@ -1,13 +1,13 @@
 import { React, Component } from 'react'
 import { Link } from 'react-router-dom'
 import './Nav.css'
-import Logo from '../../../assets/DynaLong.png'
+import Logo from '../../assets/DynaLong.png'
 
 export default function Nav() {
   return (
     <div className='NavBar'>
         <div className='NavLogo'>
-            <h1>Logo</h1>
+            <img src={Logo} alt='Logo'/>
         </div>
         <div className='NavLinks'>
             <Link to='/Home'><a>Home</a></Link>
