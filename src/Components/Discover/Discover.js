@@ -1,7 +1,7 @@
 import {React, Component, useState} from 'react'
 import './Discover.css'
 
-export default function Discover() {
+export default function Discover({bookmarks}) {
 
   //map out all references & tags from the api
 
