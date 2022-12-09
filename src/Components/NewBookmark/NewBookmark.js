@@ -1,6 +1,8 @@
+import './NewBookmark.css'
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+
 
 export default function NewBookmark() {
   const [title, setTitle] = useState('')
@@ -10,6 +12,11 @@ export default function NewBookmark() {
   const [tags, setTags] =useState([])
   const [message, setMessage] = useState('')
   const navigate = useNavigate()
+  let newTags = []
+  function handleTags(e) {
+    e.preventDefault()
+
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -42,6 +49,11 @@ export default function NewBookmark() {
     });
     navigate(-1)
   } catch(err) {}
+  setTitle('')
+  setPreview('')
+  setDescription('')
+  setLink('')
+  setTags('')
 }
 
   return (
@@ -76,13 +88,20 @@ export default function NewBookmark() {
           onChange={(e) => setLink(e.target.value)}
         />
         <br />
-        <input
+        <input 
+          className='Tag'
           type='tags'
           value={tags}
           placeholder='Enter tags'
           onChange={(e) => setTags(e.target.value)}
-        ></input>
+        >
+        </input>
+        <button 
+        className='Add'
+        onClick = {handleTags}
+        >Add</button>
         <br />
+        <div></div>
         <button type='submit'>Create</button>
         <div className='message'>{message ? <p>{message}</p> : null }</div>
       </form>
