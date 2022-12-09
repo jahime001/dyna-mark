@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 import { set } from 'mongoose'
 
 
-export default function newBookmark() {
+export default function NewBookmark() {
   const [title, setTitle] = useState('')
   const [preview, setPreview] = useState('')
   const [description, setDescription] = useState('')
@@ -11,7 +11,7 @@ export default function newBookmark() {
   const [likes, setLikes] = useState(1)
   const [dislikes, setDislikes] = useState(1)
   const [message, setMessage] = useState('')
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   // const handleSubmit = async (e) => {
   //   e.preventDefault()
@@ -70,12 +70,45 @@ export default function newBookmark() {
         setMessage('Some error occured')
       }
     } catch(err) {
-      next(err)
+      // next(err)
     }
   }
 
 
   return (
-    <div>newBookmark</div>
+    <div className='Bookmark'>
+      <form onSubmit={handleSubmit}>
+        <input
+          type='text'
+          value={title}
+          placeholder='Title'
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <br />
+        <input
+          type='preview'
+          value={preview}
+          placeholder='Enter a preview of the website'
+          onChange={(e) => setPreview(e.target.value)}
+        />
+        <br />
+        <input
+          type='description'
+          value={description}
+          placeholder='Enter description of the website'
+          onChange={(e) => setDescription(e.target.value)}
+        />
+        <br />
+        <input
+          type='link'
+          value={link}
+          placeholder='Enter website link'
+          onChange={(e) => setLink(e.target.value)}
+        />
+        <br />
+        <button type='submit'>Create</button>
+        <div className='message'>{message ? <p>{message}</p> : null }</div>
+      </form>
+    </div>
   )
 }
