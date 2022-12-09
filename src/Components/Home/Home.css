@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+.home {
+    height: 1500px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    font-family: 'DM Sans', sans-serif;
+    height: 100vh;
+}
+
+.welcome{
+    border: 1px solid;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.welcome img{
+    background-position: fil;
+}
+
+.welcome h1{
+    font-size: 80px;
+    color: aliceblue;
+    margin-top: 10px;
+}
+.welcome h3{
+    font-size: 30px;
+    color: aliceblue;
+    margin-top: -70px;
+}
+.welcome p {
+    margin-top: 150px;
+    font-size: 30px;
+    color: rgb(152, 152, 152);
+    font-style: italic;
+    /* border: 1px solid; */
+    height: 200px;
+    width: 400px;
+    
+}
+span{
+    color: rgb(239, 153, 48);
+}
+.discover{
+    border: 1px solid;
+    width: 200px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    border-radius: 20px;
+    text-align: center;
+}
+.discover h1{
+    font-size: 40px;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+.discover {
+    color: #FFF;
+    border: 4px solid #000;
+    box-shadow: 0px 0px 0px 1px #000 inset;
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.discover:hover {
+    border: 4px solid #666;
+    background-color: #FFF;
+    box-shadow: 0px 0px 0px 4px #EEE inset;
+    cursor: pointer;
+}
+
+
+.discover h1 {
+    transition: all 0.2s ease-out;
+    z-index: 2;
+}
+
+.discover:hover h1 {
+    color: #333;
+    cursor: pointer;
+}
+
+/*highlight*/
+.discover:after {
+    background: #FFF;
+    border: 0px solid #000;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .8;
+    position: absolute;
+    top: -50px;
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+    width: 50px;
+    transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    /*easeOutCirc*/
+    z-index: 1;
+}
+
+.discover:hover:after {
+    background: #FFF;
+    border: 20px solid #000;
+    opacity: 0;
+    left: 120%;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+}
+
