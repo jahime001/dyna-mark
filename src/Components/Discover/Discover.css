@@ -1,0 +1,8 @@
+.tag-items{
+    border: 1px solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
