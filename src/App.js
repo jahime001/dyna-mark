@@ -1,9 +1,11 @@
 import './App.css';
+import NewBookmark from './Components/NewBookmark/NewBookmark';
 import Discover from './Components/Discover/Discover';
 import Home from './Components/Home/Home';
 import Nav from './Components/Nav/Nav';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+
 
 function App() {
 
