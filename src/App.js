@@ -43,7 +43,7 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<Home topMarks={topMarks} />} />
-          <Route path='/discover' element={<Discover />} />
+          <Route path='/discover' element={<Discover bookmarks={bookmarks} />} />
           <Route path='/newbookmark' element={<NewBookmark />} />
           <Route path='/about' element={<About />} />
         </Routes>
