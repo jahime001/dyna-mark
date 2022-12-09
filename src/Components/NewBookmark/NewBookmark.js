@@ -2,6 +2,21 @@ import './NewBookmark.css'
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import Modal from "react-modal";
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    backgroundColor: "white",
+    width: 400,
+    height: 200
+  },
+};
 
 
 export default function NewBookmark() {
@@ -11,8 +26,9 @@ export default function NewBookmark() {
   const [link, setLink] = useState('')
   const [tags, setTags] =useState([])
   const [message, setMessage] = useState('')
+  const [modalOpen, setModalOpen] = useState(false);
 
-  const[isHovering, setIsHovering] = useState(false)
+  
 
   const navigate = useNavigate()
   let newTags = []
@@ -61,13 +77,6 @@ export default function NewBookmark() {
   
 }
 
-const handleMouseOver = () => {
-    setIsHovering(true)
-  }
-
-  const handleMouseOut = () => {
-    setIsHovering(false)
-  }
 
   return (
     <div>
@@ -88,12 +97,7 @@ const handleMouseOver = () => {
           onChange={(e) => setPreview(e.target.value)}
           
           />
-        <button
-          className='Hover'
-          onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-          ? 
-        </button>
-        {isHovering && <h4>Insert a brief descritpion about the resource you are referring.</h4>}
+       
         <br />
         <input
           type='description'
@@ -101,12 +105,8 @@ const handleMouseOver = () => {
           placeholder='Enter description of the website'
           onChange={(e) => setDescription(e.target.value)}
         />
-        <div 
-          className='Hover'
-          onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-          ?
-        </div>
-        {isHovering && <h4>Insert the full description of the resource, this can typically be found on the About us page</h4>}
+        
+        
         <br />
         <input
           type='link'
@@ -132,6 +132,41 @@ const handleMouseOver = () => {
         <button type='submit'>Create</button>
         <div className='message'>{message ? <p>{message}</p> : null }</div>
       </form>
+      <button onClick={setModalOpen}>Help</button>
+      <Modal
+        isOpen={modalOpen}
+        onRequestClose={() => setModalOpen(false)}
+        style={customStyles}
+      >
+        <div>
+          <h3>How to create you <span>bookmark</span></h3>
+          <p>Title: <em>Title of resource or webpage.</em></p>
+          <p>Preview: <em>This will be displayed on the bookmark card, it should be short description of the webpage</em></p>
+          <p>Description: <em>What the webpage or resource is about(can be found in the about page if the website)</em></p>
+          <p>Link: <em>Copy and paste links here</em></p>
+          <p>Tags: <em><b>PLEASE USE TAGS FROM THE LIST BELOW(Copy and Paste)</b></em></p>
+          <ul>
+            <li>Css</li>
+            <li>Generator</li>
+            <li>Documentation</li>
+            <li>MonogDB</li>
+            <li>Firebase</li>
+            <li>Front-End</li>
+            <li>Back-End</li>
+            <li>Express</li>
+            <li>Api</li>
+            <li>Practice</li>
+            <li>Javscript</li>
+            <li>Reads</li>
+            <li>W3Schools</li>
+            <li>Html</li>
+            <li>React</li>
+            <li>Code Editor</li>
+          </ul>
+        </div>
+
+        <button onClick={() => setModalOpen(false)}>Close Modal</button>
+      </Modal>
     </div>
   )
 }
