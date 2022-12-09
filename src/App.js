@@ -1,4 +1,5 @@
 import './App.css';
+import Discover from './Components/Discover/Discover';
 import Home from './Components/Home/Home';
 import Nav from './Components/Nav/Nav';
 import axios from 'axios';
@@ -32,8 +33,9 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
+      <Nav/>
       <Home topMarks={topMarks} />
+
     </div>
   );
 }
