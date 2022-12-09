@@ -11,6 +11,9 @@ export default function NewBookmark() {
   const [link, setLink] = useState('')
   const [tags, setTags] =useState([])
   const [message, setMessage] = useState('')
+
+  const[isHovering, setIsHovering] = useState(false)
+
   const navigate = useNavigate()
   let newTags = []
   function handleTags(e) {
@@ -54,7 +57,17 @@ export default function NewBookmark() {
   setDescription('')
   setLink('')
   setTags('')
+
+  
 }
+
+const handleMouseOver = () => {
+    setIsHovering(true)
+  }
+
+  const handleMouseOut = () => {
+    setIsHovering(false)
+  }
 
   return (
     <div>
@@ -67,12 +80,20 @@ export default function NewBookmark() {
           onChange={(e) => setTitle(e.target.value)}
         />
         <br />
-        <input
+        
+          <input
           type='preview'
           value={preview}
           placeholder='Enter a preview of the website'
           onChange={(e) => setPreview(e.target.value)}
-        />
+          
+          />
+        <button
+          className='Hover'
+          onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+          ? 
+        </button>
+        {isHovering && <h4>Insert a brief descritpion about the resource you are referring.</h4>}
         <br />
         <input
           type='description'
@@ -80,6 +101,12 @@ export default function NewBookmark() {
           placeholder='Enter description of the website'
           onChange={(e) => setDescription(e.target.value)}
         />
+        <div 
+          className='Hover'
+          onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+          ?
+        </div>
+        {isHovering && <h4>Insert the full description of the resource, this can typically be found on the About us page</h4>}
         <br />
         <input
           type='link'

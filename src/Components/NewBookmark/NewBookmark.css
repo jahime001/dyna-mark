@@ -6,12 +6,18 @@ input {
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 2rem;
+    border-style: solid;
+    border-color: blue;
 }
 .Add {
     width: 4rem;
+    border-style: solid;
+    border-color: blue;
 }
 .Tag {
     width: 16rem;
+    border-style: solid;
+    border-color: green;
 }
 button {
     border: none;
@@ -28,4 +34,12 @@ button:hover {
     font-size: 1.2rem;
     text-decoration: center;
     color: #36a936;
+}
+.Hover {
+    position: relative;
+    border-style: solid;
+    border-color: red;
+    margin-left: 41rem;
+    margin-right: rem;
+
 }
