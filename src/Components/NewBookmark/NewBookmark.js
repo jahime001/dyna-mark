@@ -12,7 +12,24 @@ export default function newBookmark() {
   const [message, setMessage] = useState('')
   const navigate = useNavigate()
 
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    console.log(JSON.stringify({
+      title: title,
+      preview: preview,
+      description: description,
+      link: link,
+      likes: likes,
+      dislikes: dislikes,
+    }));
 
+    try {
+      const data = {
+        title: title,
+        
+      }
+    }
+  }
 
 
   return (
