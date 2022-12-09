@@ -3,8 +3,11 @@ import NewBookmark from './Components/NewBookmark/NewBookmark';
 import Discover from './Components/Discover/Discover';
 import Home from './Components/Home/Home';
 import Nav from './Components/Nav/Nav';
+import About from './Components/About/About';
+
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
 
 function App() {
@@ -36,8 +39,15 @@ function App() {
   return (
     <div className="App">
       <Nav/>
-      <Home topMarks={topMarks} />
-
+      
+      <main>
+        <Routes>
+          <Route path='/' element={<Home topMarks={topMarks} />} />
+          <Route path='/discover' element={<Discover />} />
+          <Route path='/newbookmark' element={<NewBookmark />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+      </main>
     </div>
   );
 }

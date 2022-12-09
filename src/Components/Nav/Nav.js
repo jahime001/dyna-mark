@@ -10,10 +10,10 @@ export default function Nav() {
             <img src={Logo} alt='Logo' className='logo'/>
         </div>
         <div className='NavLinks'>
-            <Link to='/Home'><a>Home</a></Link>
-            <Link to='/Discover'><a>Discover</a></Link>
-            <Link to='/NewBookmark'><a>New Bookmark</a></Link>
-            <Link to='/About'><a>About</a></Link>
+            <Link to='/'><a>Home</a></Link>
+            <Link to='/discover'><a>Discover</a></Link>
+            <Link to='/newbookmark'><a>New Bookmark</a></Link>
+            <Link to='/about'><a>About</a></Link>
         </div>
     </div>
   )
