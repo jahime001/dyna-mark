@@ -7,17 +7,17 @@ export default function Discover({bookmarks}) {
 
   let tagList = ['Css', 'Generator', 'Documentation', 'MongoDB', 'Firebase', 'Front-End', 'Back-End', 'Express', 'Api', 'Practice', 'Javascript', 'Reads', 'W3Schools', 'HTML', 'React', 'Code Editor']
   
-  // let references  = referenceList.map(rL => {
-  //   return (rL)
+  // let bookMarkList  = bookmarks.map(bL => {
+  //   return (bL)
   // })
 
   //grab & filter the mapped references on-click
 
-  // function filterRef() {
+  // function filterMark() {
 
   // }
 
-  // references.filter(filterRef)
+  // references.filter(filterMark)
 
   return (
     <div>
