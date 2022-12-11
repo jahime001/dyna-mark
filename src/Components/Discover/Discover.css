@@ -4,5 +4,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45%;
+    width: 80px;
+    font-size: 12px;
+    height: 30px;
+    
+}
+.all-tags{
+    border: 1px solid;
+    background-color: red;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    flex-wrap: wrap;
+}
+
+.discover-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.dropdown{
+    margin-top: 200px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.results{
+    border: 1px solid;
 }

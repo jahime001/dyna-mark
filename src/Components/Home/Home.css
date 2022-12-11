@@ -1,46 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
 .home {
-    height: 1500px;
+    
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
     flex-direction: column;
     font-family: 'DM Sans', sans-serif;
-    height: 100vh;
+    
 }
 
 .welcome{
-    border: 1px solid;
+    height: 90vh;
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 .welcome img{
-    background-position: fil;
+    background-position: fill;
 }
 
 .welcome h1{
     font-size: 80px;
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     margin-top: 10px;
+    margin-left: -900px;
 }
 .welcome h3{
     font-size: 30px;
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     margin-top: -70px;
+    margin-left: -900px;
 }
 .welcome p {
-    margin-top: 150px;
+    margin-top: 110px;
     font-size: 30px;
-    color: rgb(152, 152, 152);
+    color: rgb(0, 0, 0);
     font-style: italic;
     /* border: 1px solid; */
     height: 200px;
     width: 400px;
+    margin-left: -900px;
     
 }
 span{
@@ -54,12 +56,14 @@ span{
     justify-content: center;
     background-color: aliceblue;
     border-radius: 20px;
-    text-align: center;
+    align-items: center;
+    margin-left: -900px;
 }
-.discover h1{
+.discover a{
     font-size: 40px;
     font-weight: 100;
     color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 
@@ -85,12 +89,12 @@ span{
 }
 
 
-.discover h1 {
+.discover a {
     transition: all 0.2s ease-out;
     z-index: 2;
 }
 
-.discover:hover h1 {
+.discover:hover a {
     color: #333;
     cursor: pointer;
 }

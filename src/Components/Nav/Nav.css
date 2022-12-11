@@ -7,7 +7,7 @@
         top: 0;
         left: 0;
         z-index: 1;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(255, 255, 255, 0.5);
         backdrop-filter: saturate(180%) blur(20px);
 }
 
@@ -27,7 +27,7 @@
 
 .NavLinks a{
     text-decoration: none;
-    color: aliceblue;
+    color: rgb(0, 0, 0);
 }
 
 .NavLinks a:hover{
