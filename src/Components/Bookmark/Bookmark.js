@@ -44,6 +44,7 @@ const [booke, setBooke] = useState([])
   
     // setBooke(data)
     chosenBookmark()
+    setChanged(data.likes)
     console.log(booke)
   }
   function handleDislike(){
@@ -56,7 +57,7 @@ const [booke, setBooke] = useState([])
             <h1>{booke.title}</h1>
             <h1>{booke.description}</h1>
             <h1>{booke.link}</h1>
-            <FiThumbsUp onClick={handleLike}/>
+            <FiThumbsUp onClick={handleLike} changed={changed}/>
             <h1>{booke.likes}</h1>
             <FiThumbsDown onClick={handleDislike}/>
             <h1>{booke.dislikes}</h1>
