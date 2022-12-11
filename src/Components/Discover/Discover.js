@@ -128,10 +128,12 @@ const [modalInfo, setModalInfo] = useState(
         <div>
           {sort.map(item => {
             return (
+              <Link to={"/discover/" + item._id}>
               <div className='results' key={item.id} onClick={setModalOpen}>
                 <h1>{item.title}</h1>
                 <h2>{item.preview}</h2>
               </div>
+              </Link>
             )
           })}
         </div>

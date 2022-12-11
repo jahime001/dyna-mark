@@ -43,7 +43,7 @@ const [booke, setBooke] = useState([])
       });
   
     // setBooke(data)
-    setChanged(1)
+    chosenBookmark()
     console.log(booke)
   }
   function handleDislike(){
