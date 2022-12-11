@@ -1,4 +1,4 @@
-import { React, Component, useState } from 'react'
+import { React, Component, useState, useEffect } from 'react'
 import './Discover.css'
 import Modal from "react-modal";
 import { FiThumbsUp } from 'react-icons/fi';
@@ -18,18 +18,12 @@ const customStyles = {
   },
 };
 export default function Discover({ bookmarks }) {
-const [modalOpen, setModalOpen] = useState(false);
-const [modalInfo, setModalInfo] = useState(
-  {
-    title: ' ',
-    preview: ' ',
-    description: ' ',
-    link: ' ',
-    likes: ' ',
-    dislikes: ' ',
-    tags: ' '
-  }
-);
+  let check = bookmarks
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+
+  }, [loading])
   //map out all references & tags from the api
 
   let tagList = ['Css', 'Generator', 'Documentation', 'MongoDB', 'Firebase', 'Front-End', 'Back-End', 'Express', 'Api', 'Practice', 'Javascript', 'Reads', 'W3Schools', 'HTML', 'React', 'Code Editor']
@@ -99,75 +93,76 @@ const [modalInfo, setModalInfo] = useState(
  
  ////////////bookmarkdata
 
- function handleBookmark(value){
-  setModalOpen(true)
- let result = bookmarks.find(x => x._id == `${value}`)
- setModalInfo(result)
+ 
+ 
+ if(bookmarks){
+   if (sort) {
+     return (
+       <div className='discover-container'>
+         Search: <input
+           className='dropdown'
+           type='text'
+           placeholder='Type to search...'
+           value={text}
+           onChange={e => searchChange(e.target.value)}
+         />
+         <p>You are currently searching in the <em><b>{currentSearch}</b></em> catagory</p>
+         <select name='tags' className='dropdown' onChange={(e) => {
+           e.preventDefault()
+
+           filterMark(e.target.value)
+         }}><option value='All'>All</option>{dropdown}</select>
+
+
+         <div>
+           {sort.map(item => {
+             return (
+               <Link to={"/discover/" + item._id}>
+                 <div className='results' key={item.id} >
+                   <h1>{item.title}</h1>
+                   <h2>{item.preview}</h2>
+                 </div>
+               </Link>
+             )
+           })}
+         </div>
+         {data.length === 0 && <span>Nothing found matching '{text}'</span>}
+       </div>
+
+     )
+   }
+   return (
+     <div className='discover-container'>
+       Search: <input
+         className='dropdown'
+         type='text'
+         placeholder='Type to search...'
+         value={text}
+         onChange={e => searchChange(e.target.value)}
+       />
+       <select name='tags' className='dropdown' onChange={(e) => {
+         e.preventDefault()
+
+         filterMark(e.target.value)
+       }}> <option value='All'>All</option>{dropdown}</select>
+       <div>{data.map(item => {
+         return (
+           <Link to={"/discover/" + item._id}>
+             <div className='results' key={item._id}>
+               <h1>{item.title}</h1>
+               <h2>{item.preview}</h2>
+             </div>
+           </Link>
+         )
+       })}</div>
+       {data.length === 0 && <span>Nothing found matching '{text}'</span>}
+
+     </div>
+   )
+ }else{
+  setLoading(true)
+  return <h1>loading...</h1>
  }
  
- 
- 
-  if (sort) {
-    return (
-      <div className='discover-container'>
-        Search: <input
-          className='dropdown'
-          type='text'
-          placeholder='Type to search...'
-          value={text}
-          onChange={e => searchChange(e.target.value)}
-        />
-        <p>You are currently searching in the <em><b>{currentSearch}</b></em> catagory</p>
-        <select name='tags' className='dropdown' onChange={(e) => {
-          e.preventDefault()
-
-          filterMark(e.target.value)
-        }}><option value='All'>All</option>{dropdown}</select>
-
-
-        <div>
-          {sort.map(item => {
-            return (
-              <Link to={"/discover/" + item._id}>
-              <div className='results' key={item.id} onClick={setModalOpen}>
-                <h1>{item.title}</h1>
-                <h2>{item.preview}</h2>
-              </div>
-              </Link>
-            )
-          })}
-        </div>
-        {data.length === 0 && <span>Nothing found matching '{text}'</span>}
-      </div>
-
-    )
-  }
-  return (
-    <div className='discover-container'>
-      Search: <input 
-      className='dropdown'
-      type='text'
-      placeholder='Type to search...'
-      value={text}
-      onChange={e => searchChange(e.target.value)}
-      />
-    <select name='tags' className='dropdown' onChange={(e) =>{
-        e.preventDefault()
-
-        filterMark(e.target.value)
-    }}> <option value='All'>All</option>{dropdown}</select>
-      <div>{data.map(item => {
-        return (
-          <Link to={"/discover/" + item._id}>
-          <div className='results' key={item._id} onClick={() => handleBookmark(item._id)}>
-            <h1>{item.title}</h1>
-            <h2>{item.preview}</h2>
-          </div>
-          </Link>
-        )
-      })}</div>
-    {data.length === 0 && <span>Nothing found matching '{text}'</span>}
-    
-    </div>
-  )
+  
 }
