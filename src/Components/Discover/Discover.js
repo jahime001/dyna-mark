@@ -1,29 +1,28 @@
 import { React, Component, useState, useEffect } from 'react'
 import './Discover.css'
-import Modal from "react-modal";
-import { FiThumbsUp } from 'react-icons/fi';
-import { FiThumbsDown } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    backgroundColor: "white",
-    width: 1000,
-    height: 500
-  },
-};
-export default function Discover({ bookmarks }) {
-  let check = bookmarks
+import axios from 'axios';
+
+export default function Discover() {
+  
+  const [bookmarks, setBookmarks] = useState()
   const [loading, setLoading] = useState(false)
-
+  const options = {
+    method: 'GET',
+    url: 'https://dyna-mark.fly.dev/api/bookmark'
+  }
+  async function getBookmarks() {
+    let results = await axios.request(options);
+    console.log(results.data)
+    setBookmarks(results.data)
+  }
   useEffect(() => {
-
+    getBookmarks();
   }, [loading])
+ 
+  
+
+ 
   //map out all references & tags from the api
 
   let tagList = ['Css', 'Generator', 'Documentation', 'MongoDB', 'Firebase', 'Front-End', 'Back-End', 'Express', 'Api', 'Practice', 'Javascript', 'Reads', 'W3Schools', 'HTML', 'React', 'Code Editor']
