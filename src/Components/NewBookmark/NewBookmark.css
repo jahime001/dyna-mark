@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
 input {
     display: center;
     width: 20rem;
@@ -7,43 +9,42 @@ input {
     font-weight: 500;
     margin-bottom: 2rem;
     border-style: solid;
-    border-color: blue;
+    font-family: 'DM Sans', sans-serif;
+}
+input::placeholder{
+    color: #cfcfcf;
+}
+span2 {
+    color: #E42EA6;
 }
 .Add {
     width: 4rem;
     border-style: solid;
-    border-color: blue;
 }
 .Tag {
     width: 16rem;
     border-style: solid;
-    border-color: green;
 }
 button {
     border: none;
     padding: 1rem;
     width: 21.2rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     border-radius: 0.2rem;
     cursor: pointer;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
 }
 button:hover {
-    background-color: #c5c5c5;
+    background-color: #95C3F5;
 }
 .message {
     font-size: 1.2rem;
     text-decoration: center;
     color: #36a936;
 }
-.Hover {
-    position: relative;
-    border-style: solid;
-    border-color: red;
-    margin-left: 41rem;
-    margin-right: rem;
 
-}
-
-Modal{
-    color: red;
+h2 {
+    padding-top: 6rem;
+    font-family: 'DM Sans', sans-serif;
 }
