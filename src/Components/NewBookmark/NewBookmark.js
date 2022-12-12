@@ -3,6 +3,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import Modal from "react-modal";
+import { FaInfoCircle } from "react-icons/fa"
 
 const customStyles = {
   content: {
@@ -80,12 +81,12 @@ export default function NewBookmark() {
 
   return (
     <div>
-      <h2>Add your favorite resource here:</h2>
+      <h2>Add your <span>favorite</span> resource here:</h2>
       <form onSubmit={handleSubmit}>
         <input
           type='text'
           value={title}
-          placeholder='Title'
+          placeholder='Enter the title of the website'
           onChange={(e) => setTitle(e.target.value)}
         />
         <br />
@@ -132,19 +133,21 @@ export default function NewBookmark() {
         <button type='submit'>Create</button>
         <div className='message'>{message ? <p>{message}</p> : null }</div>
       </form>
-      <button onClick={setModalOpen}>Help</button>
+      <br />
+      <button className='help' onClick={setModalOpen}>Help <FaInfoCircle/></button>
       <Modal
+      
         isOpen={modalOpen}
         onRequestClose={() => setModalOpen(false)}
         style={customStyles}
       >
         <div>
-          <h3>How to create you <span>bookmark</span></h3>
-          <p>Title: <em>Title of resource or webpage.</em></p>
-          <p>Preview: <em>This will be displayed on the bookmark card, it should be short description of the webpage</em></p>
-          <p>Description: <em>What the webpage or resource is about(can be found in the about page if the website)</em></p>
-          <p>Link: <em>Copy and paste links here</em></p>
-          <p>Tags: <em><b>PLEASE USE TAGS FROM THE LIST BELOW(Copy and Paste)</b></em></p>
+          <h3>How to create your <span>bookmark</span></h3>
+          <p><span2>Title:</span2> <em>Title of resource or webpage.</em></p>
+          <p><span2>Preview:</span2> <em>This will be displayed on the bookmark card, it should be short description of the webpage</em></p>
+          <p><span2>Description:</span2> <em>What the webpage or resource is about(can be found in the about page if the website)</em></p>
+          <p><span2>Link:</span2> <em>Copy and paste links here</em></p>
+          <p><span2>Tags:</span2> <em><b>PLEASE USE TAGS FROM THE LIST BELOW(Copy and Paste)</b></em></p>
           <ul>
             <li>Css</li>
             <li>Generator</li>
