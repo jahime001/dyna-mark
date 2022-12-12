@@ -29,7 +29,7 @@
 }
 
 .dropdown{
-    margin-top: 200px;
+    /* margin-top: 200px; */
     padding: 10px;
     font-size: 20px;
     font-family: 'DM Sans', sans-serif;
@@ -37,4 +37,17 @@
 
 .results{
     border: 1px solid;
+}
+
+.find{
+    border: 1px solid;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    height: 75px;
+}
+.search{
+    border: 1px solid red;
 }

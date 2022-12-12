@@ -32,9 +32,24 @@ export default function Discover({bookmarks}) {
   const [currentSearch, setCurrentSearch] = useState()
   
 
+
   //search bar
   const[text, setText] = useState('')
-  const [data, setData] = useState(bookmarks)
+  const [data, setData] = useState([])
+
+  function handleData(){
+    if (bookmarks) {
+      setData([bookmarks])
+      setSort(bookmarks)
+    }
+  }
+
+  console.log(data)
+
+useEffect(() => {
+  handleData()
+}, [bookmarks])
+
   const searchChange = value => {
     setText(value)
     filterData(value)
@@ -94,12 +109,15 @@ export default function Discover({bookmarks}) {
 
  
  
- if(bookmarks){
+ if(bookmarks === undefined){
+   return <div><h1>loading...</h1></div>
+   
+ }else{
    if (sort) {
      return (
        <div className='discover-container'>
          Search: <input
-           className='dropdown'
+           className='find'
            type='text'
            placeholder='Type to search...'
            value={text}
@@ -129,38 +147,39 @@ export default function Discover({bookmarks}) {
        </div>
 
      )
+   } else {
+     return (
+       <div className='discover-container'>
+         <div className='find'>
+           <h1>Search:</h1> <input
+             className='search'
+             type='text'
+             placeholder='Type to search...'
+             value={text}
+             onChange={e => searchChange(e.target.value)}
+           />
+           <select name='tags' className='dropdown' onChange={(e) => {
+             e.preventDefault()
+
+             filterMark(e.target.value)
+           }}> <option value='All'>All</option>{dropdown}</select>
+         </div>
+
+         <div>{data.map(item => {
+           return (
+             <Link to={"/discover/" + item._id}>
+               <div className='results' key={item._id}>
+                 <h1>{item.title}</h1>
+                 <h2>{item.preview}</h2>
+               </div>
+             </Link>
+           )
+         })}</div>
+         {data.length === 0 && <span>Nothing found matching '{text}'</span>}
+
+       </div>
+     )
    }
-   return (
-     <div className='discover-container'>
-       Search: <input
-         className='dropdown'
-         type='text'
-         placeholder='Type to search...'
-         value={text}
-         onChange={e => searchChange(e.target.value)}
-       />
-       <select name='tags' className='dropdown' onChange={(e) => {
-         e.preventDefault()
-
-         filterMark(e.target.value)
-       }}> <option value='All'>All</option>{dropdown}</select>
-       <div>{data.map(item => {
-         return (
-           <Link to={"/discover/" + item._id}>
-             <div className='results' key={item._id}>
-               <h1>{item.title}</h1>
-               <h2>{item.preview}</h2>
-             </div>
-           </Link>
-         )
-       })}</div>
-       {data.length === 0 && <span>Nothing found matching '{text}'</span>}
-
-     </div>
-   )
- }else{
-  setLoading(true)
-  return <h1>loading...</h1>
  }
  
   
