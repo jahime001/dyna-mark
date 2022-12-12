@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 .tag-items{
     border: 1px solid;
     border-radius: 10px;
@@ -36,18 +37,56 @@
 }
 
 .results{
-    border: 1px solid;
+    /* border: 1px solid; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Playfair Display', serif;
 }
-
-.find{
+.results-item{
     border: 1px solid;
+    width: 300px;
+    height: 150px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: black;
+}
+.results  a{
+    text-decoration: none;
+}
+.results-item button{
+    border: 1px solid;
+    width: 70px;
+    height: px;
+
+}
+.find{
+    /* border: 1px solid; */
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
-    height: 75px;
+    height: 700px;
+    background: rgb(30, 135, 241);
+        background: linear-gradient(324deg, rgba(30, 135, 241, 1) 0%, rgba(235, 125, 216, 1) 100%);
 }
 .search{
-    border: 1px solid red;
+    margin-top: 32px;;
 }
+
+.upper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.scope{
+    /* border: 1px solid; */
+    height: 400px;
+    margin-top: 305px;
+    margin-left: 900px;
+    position: absolute;
+}
+
