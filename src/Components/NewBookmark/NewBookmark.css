@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
-input {
+.text-field {
     display: center;
     width: 20rem;
     height:  2rem;
