@@ -8,6 +8,7 @@ import Footer from './Components/Footer/Footer';
 import Info from './Components/Info/Info';
 import Bookmark from './Components/Bookmark/Bookmark';
 
+import useLocalStorage from 'use-local-storage'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
