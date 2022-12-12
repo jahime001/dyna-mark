@@ -9,6 +9,7 @@ import Info from './Components/Info/Info';
 import Bookmark from './Components/Bookmark/Bookmark';
 
 import axios from 'axios';
+import useLocalStorage from 'use-local-storage'
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
@@ -29,6 +30,10 @@ function App() {
     getBookmarks();
   }, [])
   console.log('this is app.js')
+
+  //Setup for Dark mode begins here
+  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
 
   return (
     <div>
