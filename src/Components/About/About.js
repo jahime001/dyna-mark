@@ -20,7 +20,7 @@ export default function About() {
   window.addEventListener("scroll", handleShow);
 
   return (
-    <div className='Info'>
+    <div className='about-container'>
       <div>
         <div className='about'>
           <div className='art' style={{ backgroundImage: `url(${about})`, backgroundPosition: "center" }}>

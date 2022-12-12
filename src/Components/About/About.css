@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
-.Info {
+.about-container {
     margin-top: 300px;
     height: 200vh;
     display: flex;
@@ -35,7 +35,7 @@
     font-family: 'DM Sans', sans-serif;
 }
 
-h2 {
+.about h2 {
     padding-top: 2rem;
 }
 .follow {
