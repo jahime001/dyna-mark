@@ -40,3 +40,24 @@
     height: 60px;
     margin-left: 25px;
 }
+
+.App {
+    color: var(--text-primary);
+    background-color: var(--background);
+    font-size: large;
+    font-weight: bold;
+    padding: 20px;
+    height: calc(100vh - 40px);
+    transition: all .5s;
+  }
+
+  .theme-button {
+    color: var(--text-primary);
+    background-color: var(--background);
+    border: 2px var(--text-primary) solid;
+    position: absolute;
+    float: right;
+    margin-left: 200px;
+    margin-top: 7px;
+    transition: all .5s;
+  }

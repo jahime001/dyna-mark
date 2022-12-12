@@ -9,7 +9,6 @@ import Info from './Components/Info/Info';
 import Bookmark from './Components/Bookmark/Bookmark';
 
 import axios from 'axios';
-import useLocalStorage from 'use-local-storage'
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
@@ -31,21 +30,9 @@ function App() {
   }, [])
   console.log('this is app.js')
 
-  //Setup for Dark mode begins here
-  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
-
-  const switchTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme)
-  }
-
   return (
-    <div className='app' data-theme={theme}>
+    <div className='app'>
       <Nav/>
-      <button onClick={switchTheme}>
-        Switch to {theme === 'light' ? 'Dark' : "Light"} Theme
-      </button>
   
       <main>
         <Routes>

@@ -36,22 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.App {
-  color: var(--text-primary);
-  background-color: var(--background);
-  font-size: large;
-  font-weight: bold;
-  padding: 20px;
-  height: calc(100vh - 40px);
-  transition: all .5s;
-}
-button {
-  color: var(--text-primary);
-  background-color: var(--background);
-  border: 2px var(--text-primary) solid;
-  margin-top: 100px;
-  position: absolute;
-  float: right;
-  transition: all .5s;
-}
