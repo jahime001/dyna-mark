@@ -50,6 +50,8 @@ button {
   color: var(--text-primary);
   background-color: var(--background);
   border: 2px var(--text-primary) solid;
+  margin-top: 100px;
+  position: absolute;
   float: right;
   transition: all .5s;
 }
