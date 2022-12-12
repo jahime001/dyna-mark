@@ -6,7 +6,7 @@ import Nav from './Components/Nav/Nav';
 import About from './Components/About/About';
 import Footer from './Components/Footer/Footer';
 import Info from './Components/Info/Info';
-import Bookmark from './Components/Bookmark/Bookmark'
+import Bookmark from './Components/Bookmark/Bookmark';
 
 import axios from 'axios';
 import { useEffect, useState } from 'react';
@@ -24,13 +24,14 @@ function App() {
     console.log(results.data)
     setBookmarks(results.data)
   }
+
   useEffect(() => {
     getBookmarks();
   }, [])
   console.log('this is app.js')
 
   return (
-    <div className="App">
+    <div>
       <Nav/>
   
       <main>
