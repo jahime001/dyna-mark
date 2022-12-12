@@ -29,22 +29,24 @@ window.addEventListener("scroll", handleShow);
               <p>We are 3 classmates that thought it would be</p>
               
             </div></div>
-        <div className='boxes'>
+        <div className='boxes2'>
             
             <div className={`${myclass}`} style={{ transition: "all 1.5s" }}>
-                <div className='art' style={{ backgroundImage: `url(${about})`, backgroundPosition: "center" }}>
+                <div className='art2' style={{ backgroundImage: `url(${about})`, backgroundPosition: "center" }}>
                </div>
                 <h1><span2>Follow</span2> us!</h1>
                 {/* <p><a href={https://www.linkedin.com/in/morgan-arancibia/}>Morgan's LinkedIn</a></p> */}
             </div>
+            <br />
             <div className={`${myclass}`} style={{ transition: "all 1.5s" }}>
-                <div className='art' style={{ backgroundImage: `url(${about})`, backgroundPosition: "center" }}>
+                <div className='art2' style={{ backgroundImage: `url(${about})`, backgroundPosition: "center" }}>
                </div>
                 <h1><span2>Follow</span2> us!</h1>
                 {/* <p><a href={https://www.linkedin.com/in/morgan-arancibia/}>Morgan's LinkedIn</a></p> */}
             </div>
+            <br />
             <div className={`${myclass}`} style={{ transition: "all 1.5s" }}>
-                <div className='art' style={{ backgroundImage: `url(${about})`, backgroundPosition: "center" }}>
+                <div className='art2' style={{ backgroundImage: `url(${about})`, backgroundPosition: "center" }}>
                </div>
                 <h1><span2>Follow</span2> us!</h1>
                 {/* <p><a href={https://www.linkedin.com/in/morgan-arancibia/}>Morgan's LinkedIn</a></p> */}
