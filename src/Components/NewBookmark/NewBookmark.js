@@ -29,9 +29,8 @@ export default function NewBookmark() {
   const [message, setMessage] = useState('')
   const [modalOpen, setModalOpen] = useState(false);
 
-  
-
   const navigate = useNavigate()
+  
   let newTags = []
   function handleTags(e) {
     e.preventDefault()

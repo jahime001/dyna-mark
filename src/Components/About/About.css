@@ -1,0 +1,17 @@
+
+img {
+    border-radius: 2%;
+    width: 15%;
+    height: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.Info {
+    margin-top: 300px;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+}
