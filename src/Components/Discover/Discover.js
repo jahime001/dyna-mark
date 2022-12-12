@@ -3,22 +3,22 @@ import './Discover.css'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-export default function Discover() {
-  
-  const [bookmarks, setBookmarks] = useState()
+export default function Discover({bookmarks}) {
+  console.log(bookmarks)
+  // const [bookmarks, setBookmarks] = useState()
   const [loading, setLoading] = useState(false)
-  const options = {
-    method: 'GET',
-    url: 'https://dyna-mark.fly.dev/api/bookmark'
-  }
-  async function getBookmarks() {
-    let results = await axios.request(options);
-    console.log(results.data)
-    setBookmarks(results.data)
-  }
-  useEffect(() => {
-    getBookmarks();
-  }, [loading])
+  // const options = {
+  //   method: 'GET',
+  //   url: 'https://dyna-mark.fly.dev/api/bookmark'
+  // }
+  // async function getBookmarks() {
+  //   let results = await axios.request(options);
+  //   console.log(results.data)
+  //   setBookmarks(results.data)
+  // }
+  // useEffect(() => {
+    
+  // }, [loading])
  
   
 

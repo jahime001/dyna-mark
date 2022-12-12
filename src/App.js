@@ -14,8 +14,20 @@ import { Route, Routes } from 'react-router-dom';
 
 
 function App() {
-
- 
+ const [bookmarks, setBookmarks] = useState()
+ const options = {
+    method: 'GET',
+    url: 'https://dyna-mark.fly.dev/api/bookmark'
+  }
+  async function getBookmarks() {
+    let results = await axios.request(options);
+    console.log(results.data)
+    setBookmarks(results.data)
+  }
+  useEffect(() => {
+    getBookmarks();
+  }, [])
+  console.log('this is app.js')
 
   return (
     <div className="App">
@@ -24,7 +36,7 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<Home  />} />
-          <Route path='/discover' element={<Discover />} />
+          <Route path='/discover' element={<Discover bookmarks={bookmarks}/>} />
           <Route path='/discover/:id' element={<Bookmark />} />
           <Route path='/newbookmark' element={<NewBookmark />} />
           <Route path='/about' element={<About />} />
