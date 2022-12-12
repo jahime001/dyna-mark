@@ -31,9 +31,20 @@ function App() {
   }, [])
   console.log('this is app.js')
 
+   //Setup for Dark mode begins here
+   const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+   const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+
+   const switchTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme)
+  }
+
+  console.log(theme, 'this is the theme')
+
   return (
-    <div className='app'>
-      <Nav/>
+    <div className='app' data-theme={theme}>
+      <Nav theme={theme} setTheme={setTheme} defaultDark={defaultDark} switchTheme={switchTheme}/>
   
       <main>
         <Routes>

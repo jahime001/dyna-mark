@@ -4,25 +4,25 @@ import './Nav.css'
 import Logo from '../../assets/DynaV2.png'
 import useLocalStorage from 'use-local-storage'
 
-export default function Nav() {
+export default function Nav({theme, setTheme, defaultDark, switchTheme} ) {
 
-  //Setup for Dark mode begins here
-  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+  // //Setup for Dark mode begins here
+  // const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  // const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
 
-  const switchTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme)
-  }
+  // const switchTheme = () => {
+  //   const newTheme = theme === 'light' ? 'dark' : 'light';
+  //   setTheme(newTheme)
+  // }
 
 
   return (
-    <div className='NavBar' data-theme={theme}>
+    <div className='NavBar'>
         <div className='NavLogo'>
             <img src={Logo} alt='Logo' className='logo'/>
         </div>
         <button className='theme-button' onClick={switchTheme}>
-        Switch to {theme === 'light' ? 'dark' : "light"} Theme
+        Switch to {theme === 'light' ? 'Dark' : "Light"} Theme
         </button>
         <div className='NavLinks'>
             <Link to='/'>Home</Link>

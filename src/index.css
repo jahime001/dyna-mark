@@ -15,7 +15,7 @@ code {
 :root {
   --background: white;
   --text-primary: black;
-  --text-secondary: royalblue;
+  --text-secondary: white;
   --accent: purple;
 }
 [data-theme='dark'] {

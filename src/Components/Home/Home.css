@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
 .home {
-    
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
     flex-direction: column;
     font-family: 'DM Sans', sans-serif;
-    
+    color: var(--background);
+    background-color: var(--text-secondary);
 }
 
 .welcome{
@@ -54,7 +54,7 @@ span{
     height: 75px;
     display: flex;
     justify-content: center;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     border-radius: 20px;
     align-items: center;
     margin-left: -900px;
@@ -66,16 +66,11 @@ span{
     text-decoration: none;
 }
 
-
-
-
-
-
 .discover {
     color: #FFF;
     border: 4px solid #000;
     box-shadow: 0px 0px 0px 1px #000 inset;
-    background-color: #000;
+    /* background-color: #000; */
     overflow: hidden;
     position: relative;
     transition: all 0.3s ease-in-out;
