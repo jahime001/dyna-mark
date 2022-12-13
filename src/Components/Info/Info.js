@@ -19,7 +19,7 @@ export default function Info() {
 window.addEventListener("scroll", handleShow);
   return (
       <div className='Info'>
-          <h1>What is Dyna-Mark</h1>
+          <h1 className='Heading'>What is Dyna-Mark</h1>
           <div className='boxes'>
               <div className={`${myclass}`} style={{ transition: "all 1s" }}>
                   <div className='art' style={{ backgroundImage: `url(${bx1})`, backgroundPosition: "center"}}>

@@ -5,7 +5,12 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    
+    color: var(--text-secondary);
+    background-color: var(--text-secondary);
+}
+
+.Heading {
+    color: var(--text-primary);
 }
 
 .boxes{
@@ -14,6 +19,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    color: var(--text-primary);
 }
 
 .boxes > * {
@@ -25,9 +31,9 @@
     overflow: hidden;
     /* border: 1px solid; */
     flex-direction: column;
-    
+    background-color: var(--background);
 }
-.boxes
+
 .art{
     background-color: blue;
     width: 100%;
