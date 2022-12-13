@@ -125,10 +125,6 @@ export default function NewBookmark() {
           onChange={(e) => setTags(e.target.value)}
         >
         </input>
-        <button
-          className='Add'
-          onClick={handleTags}
-        >Add</button>
         <br />
         <div></div>
         <button type='submit'>Create</button>
