@@ -15,16 +15,9 @@ input::placeholder{
     color: #cfcfcf;
 }
 span2 {
-    color: #E42EA6;
+    color: #67B772;
 }
-.Add {
-    width: 4rem;
-    border-style: solid;
-}
-.Tag {
-    width: 16rem;
-    border-style: solid;
-}
+
 button {
     border: none;
     padding: 1rem;
@@ -47,4 +40,25 @@ button:hover {
 h2 {
     padding-top: 6rem;
     font-family: 'DM Sans', sans-serif;
+}
+/* .bookmark-img img {
+    height: 600px;
+    margin-bottom: none;
+    margin-right: 40rem;
+    padding-top: 6rem;
+} */
+.create{
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+}
+
+h1 img {
+    margin: 0 0.5em;
+    height: 13em;
+    padding-top: 3rem;
 }
