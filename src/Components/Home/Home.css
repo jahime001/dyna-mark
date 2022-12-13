@@ -56,7 +56,6 @@ span{
     height: 75px;
     display: flex;
     justify-content: center;
-    /* background-color: aliceblue; */
     border-radius: 20px;
     align-items: center;
     margin-left: -900px;
@@ -64,15 +63,14 @@ span{
 .discover a{
     font-size: 40px;
     font-weight: 100;
-    color: rgb(255, 255, 255);
+    color: var(--text-primary);
     text-decoration: none;
 }
 
 .discover {
-    color: #FFF;
+    color: var(--text-primary);
     border: 4px solid #000;
     box-shadow: 0px 0px 0px 1px #000 inset;
-    /* background-color: #000; */
     overflow: hidden;
     position: relative;
     transition: all 0.3s ease-in-out;
