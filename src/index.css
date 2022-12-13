@@ -21,6 +21,6 @@ code {
 [data-theme='dark'] {
   --background: black;
   --text-primary: white;
-  --text-secondary: grey;
+  --text-secondary: black;
   --accent: darkred;
 }

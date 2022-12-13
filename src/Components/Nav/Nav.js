@@ -1,20 +1,15 @@
-import { React, Component } from 'react'
+import { React, Component, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Nav.css'
 import Logo from '../../assets/DynaV2.png'
 import useLocalStorage from 'use-local-storage'
 
+
 export default function Nav({theme, setTheme, defaultDark, switchTheme} ) {
-
-  // //Setup for Dark mode begins here
-  // const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  // const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
-
-  // const switchTheme = () => {
-  //   const newTheme = theme === 'light' ? 'dark' : 'light';
-  //   setTheme(newTheme)
-  // }
-
+const [showNav, setShowNav] = useState(false)
+  const toggleNavItems = () => {
+  setShowNav(!showNav)
+}
 
   return (
     <div className='NavBar'>

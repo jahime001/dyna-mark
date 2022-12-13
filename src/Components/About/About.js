@@ -46,7 +46,7 @@ export default function About() {
         <div className={`${myclass}`} style={{ transition: "all 1.5s" }}>
           <div className='art2' style={{ backgroundImage: `url(${box1})`, backgroundPosition: "center" }}>
           </div>
-          <h1>Bibhor Gurung</h1>
+          <h1 className='heading'>Bibhor Gurung</h1>
           <p><a className='anchor' href={'https://github.com/Bibhor2000'} target='_blank'><FaGithub/> GitHub</a></p>
           <p><a className='anchor' href={'https://www.linkedin.com/in/bibhor2000/'} target='_blank'> <FaLinkedin/> LinkedIn </a></p>
         </div>
@@ -54,7 +54,7 @@ export default function About() {
         <div className={`${myclass}`} style={{ transition: "all 1.5s" }}>
           <div className='art2' style={{ backgroundImage: `url(${about2})`, backgroundPosition: "center" }}>
           </div>
-          <h1>Jahime Cameau</h1>
+          <h1 className='heading'>Jahime Cameau</h1>
           <p><a className='anchor' href={'https://github.com/jahime001'} target='_blank'><FaGithub/> GitHub</a></p>
           <p><a className='anchor' href={'https://www.linkedin.com/in/jahimecameau/'} target='_blank'> <FaLinkedin/> LinkedIn </a></p>
         </div>
@@ -62,7 +62,7 @@ export default function About() {
         <div className={`${myclass}`} style={{ transition: "all 1.5s" }}>
           <div className='art2' style={{ backgroundImage: `url(${about})`, backgroundPosition: "center" }}>
           </div>
-          <h1>Morgan Arancibia</h1>
+          <h1 className='heading'>Morgan Arancibia</h1>
           <p><a className='anchor' href={'https://github.com/mobrewer'} target='_blank'><FaGithub/> GitHub</a></p>
           <p><a className='anchor' href={'https://www.linkedin.com/in/morgan-arancibia/'} target='_blank'> <FaLinkedin/> LinkedIn </a></p>
         </div>
