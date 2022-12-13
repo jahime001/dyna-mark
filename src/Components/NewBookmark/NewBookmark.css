@@ -83,3 +83,9 @@ button:hover.help {
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (max-width: 480px) {
+    [class*="bookmark-container"] {
+        width: 100%;
+      }
+}
