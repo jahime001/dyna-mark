@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
+/* 834 x 1103 */
+
 .home {
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
     flex-direction: column;
     font-family: 'DM Sans', sans-serif;
-    color: var(--background);
+    color: var(--text-secondary);
     background-color: var(--text-secondary);
 }
 
@@ -24,20 +26,20 @@
 
 .welcome h1{
     font-size: 80px;
-    color: rgb(0, 0, 0);
     margin-top: 10px;
     margin-left: -900px;
+    color: var(--text-primary);
 }
 .welcome h3{
     font-size: 30px;
-    color: rgb(0, 0, 0);
     margin-top: -70px;
     margin-left: -900px;
+    color: var(--text-primary);
 }
 .welcome p {
     margin-top: 110px;
     font-size: 30px;
-    color: rgb(0, 0, 0);
+    color: var(--text-primary);
     font-style: italic;
     /* border: 1px solid; */
     height: 200px;
