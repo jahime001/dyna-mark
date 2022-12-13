@@ -25,7 +25,7 @@ export default function NewBookmark() {
   const [preview, setPreview] = useState('')
   const [description, setDescription] = useState('')
   const [link, setLink] = useState('')
-  const [tags, setTags] = useState([])
+  const [tags, setTags] = useState()
   const [message, setMessage] = useState('')
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -53,7 +53,7 @@ export default function NewBookmark() {
         preview: preview,
         description: description,
         link: link,
-        tags: tags
+        tags: tags.split(',')
       }
       const res = await axios.post('https://dyna-mark.fly.dev/api/bookmark/', data)
         .then(function (response) {
