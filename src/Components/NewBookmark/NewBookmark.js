@@ -26,17 +26,13 @@ export default function NewBookmark() {
   const [preview, setPreview] = useState('')
   const [description, setDescription] = useState('')
   const [link, setLink] = useState('')
-  const [tags, setTags] = useState([])
+  const [tags, setTags] = useState()
   const [message, setMessage] = useState('')
   const [modalOpen, setModalOpen] = useState(false);
+  const [likes, setLikes] = useState(0)
+  const [dislikes, setDislikes] = useState(0)
 
   const navigate = useNavigate()
-
-  let newTags = []
-  function handleTags(e) {
-    e.preventDefault()
-
-  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -54,7 +50,9 @@ export default function NewBookmark() {
         preview: preview,
         description: description,
         link: link,
-        tags: tags
+        tags: tags.split(','),
+        likes: likes,
+        dislikes: dislikes
       }
       const res = await axios.post('https://dyna-mark.fly.dev/api/bookmark/', data)
         .then(function (response) {
@@ -128,10 +126,6 @@ export default function NewBookmark() {
           onChange={(e) => setTags(e.target.value)}
         >
         </input>
-        <button
-          className='Add'
-          onClick={handleTags}
-        >Add</button>
         <br />
         <div></div>
         <button type='submit'>Create</button>
