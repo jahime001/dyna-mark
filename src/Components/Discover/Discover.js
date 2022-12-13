@@ -147,10 +147,15 @@ let color = {
          
          <div className='results'>
            {sort.map(item => {
+            let total = item.likes + item.dislikes
+            let per = Math.floor(100 * item.likes / total)
+            let NaN = 0
+            console.log(per)
              return (
                <Link to={"/discover/" + item._id}>
                  <div className='results-item' key={item.id} >
                   <div className='upper'>
+                     <p>{per} %</p>
                      <h1>{item.title}</h1>
                      <IoIosBookmark style={{ color: "blue", backgroundSize: 'cover' }} />
                   </div>
