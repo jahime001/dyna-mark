@@ -13,14 +13,14 @@ code {
 }
 
 :root {
-  --background: white;
+  --background: rgb(0, 0, 0);
   --text-primary: black;
-  --text-secondary: white;
+  --text-secondary: rgb(255, 255, 255);
   --accent: purple;
 }
 [data-theme='dark'] {
   --background: black;
   --text-primary: white;
-  --text-secondary: grey;
+  --text-secondary: rgb(0, 0, 0);
   --accent: darkred;
 }
