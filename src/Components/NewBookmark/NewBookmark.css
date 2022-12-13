@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
+
+.newbookmark {
+    color: var(--background);
+    background-color: var(--text-secondary);
+}
+input {
+
 .text-field {
+
     display: center;
     width: 20rem;
     height:  2rem;

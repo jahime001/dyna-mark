@@ -79,7 +79,7 @@ export default function NewBookmark() {
 
 
   return (
-    <div>
+    <div className='newbookmark'>
       <h2>Add your <span>favorite</span> resource here:</h2>
       <form onSubmit={handleSubmit}>
         <input
