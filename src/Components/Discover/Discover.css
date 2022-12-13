@@ -27,6 +27,8 @@
     justify-content: center;
     align-items: center;
     font-family: 'DM Sans', sans-serif;
+    color: var(--background);
+    background-color: var(--text-secondary);
 }
 
 .dropdown{
@@ -73,7 +75,10 @@
         background: linear-gradient(324deg, rgba(30, 135, 241, 1) 0%, rgba(235, 125, 216, 1) 100%);
 }
 .search{
-    margin-top: 32px;;
+    padding: 10px;
+        font-size: 20px;
+        font-family: 'DM Sans', sans-serif;
+        width: 300px;
 }
 
 .upper{

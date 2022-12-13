@@ -40,3 +40,14 @@
     height: 60px;
     margin-left: 25px;
 }
+
+  .theme-button {
+    color: var(--text-primary);
+    background-color: var(--background);
+    border: 2px var(--text-primary) solid;
+    position: absolute;
+    float: right;
+    margin-left: 200px;
+    margin-top: 7px;
+    transition: all .5s;
+  }
