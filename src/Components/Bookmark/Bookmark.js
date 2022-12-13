@@ -10,6 +10,23 @@ import { BsFillXCircleFill } from 'react-icons/bs';
 import { BsFillCircleFill } from 'react-icons/bs';
 import about from '../../assets/About.png'
 import abs from '../../assets/abs3.png'
+import Modal from "react-modal";
+
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    backgroundColor: "white",
+    width: 400,
+    height: 200,
+
+  },
+};
 
 export default function Bookmark() {
   let {id} = useParams()
@@ -17,6 +34,8 @@ export default function Bookmark() {
 const [booke, setBooke] = useState([])
   const [loading, setLoading] = useState(false)
   const [changed, setChanged] = useState(0)
+  const [modalOpen, setModalOpen] = useState(false);
+  const [password, setPassword] = useState();
 
   const options2 = {
     method: 'GET',
@@ -78,7 +97,14 @@ const [booke, setBooke] = useState([])
   }
 
 
- 
+ function deleteBooke(){
+      if(password == '2022'){
+        axios.delete(`https://dyna-mark.fly.dev/api/bookmark/${id}`)
+        navigate(-1)
+      }else{
+        alert('incorrect')
+      }
+ }
 
   if (booke){
     return (
@@ -86,8 +112,8 @@ const [booke, setBooke] = useState([])
         <div className='booke-container'>
           <div className='booke-img' style={{ backgroundImage: `url(${about})`, backgroundPosition: "center" }}>
             <div className='booke-nav'>
-              <BsFillXCircleFill style={{color: "red"}} onClick={() => navigate(-1)}/>
-              <BsFillCircleFill  style={{color: "yellow"}}/>
+              <BsFillXCircleFill style={{color: "red"}} onClick={setModalOpen} />
+              <BsFillCircleFill  style={{color: "yellow"}} onClick={() => navigate(-1)}/>
               <BsFillCircleFill  style={{color: "00e000"}}/>
             </div>
           </div>
@@ -106,11 +132,23 @@ const [booke, setBooke] = useState([])
             </div>
           </div>
           </div>
-          
-          
-          
-
+        
         </div>
+        <Modal
+        isOpen={modalOpen}
+        onRequestClose={() => setModalOpen(false)}
+        style={customStyles}
+      >
+       <input
+         className="password"
+          type='password'
+          value={password}
+          placeholder='Enter password'
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button type='submit' onClick={deleteBooke}>Delete</button>
+      {/* <button onClick={() => setModalOpen(false)}>Close Modal</button> */}
+      </Modal>
       </div>
     )
   } else{

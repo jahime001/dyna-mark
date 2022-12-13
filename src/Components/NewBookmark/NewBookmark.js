@@ -132,7 +132,7 @@ export default function NewBookmark() {
           type='tags'
           value={tags}
           placeholder='Enter tags'
-          onChange={(e) => setTags(e.target.value)}
+          onChange={(e) => setTags(e.target.value.toLowerCase())}
         >
         </input>
         <br />

@@ -3,6 +3,8 @@ import './Discover.css'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { IoIosBookmark } from "react-icons/io";
+import { BiTrendingUp } from "react-icons/bi";
+import { AiFillPlusCircle } from "react-icons/ai";
 import scope from '../../assets/scope.png'
 import open from '../../assets/open.png'
 export default function Discover({bookmarks}) {
@@ -108,14 +110,28 @@ useEffect(() => {
     })
  
     ////color
-let color = {
-  "red": "red"
+let colors = {
+  Css: "#0000ff",
+Generator: "#998714",
+Documentation: "#ff0000",
+MongoDB: "#589636",
+Firebase: "#F5820D",
+// Front-End: "",
+// Back-End: "",
+Express: "#a9b2af",
+Api: "#4e00af",
+Practice: "#00476c",
+Javascript: "#ffff00",
+Reads: "#006c6f",
+W3Schools: "#3cb371",
+Html: "#e34c26",
+React: "#61dbfb"
+// Code Editor: ""
 }
 
 
     /////
  ////////////bookmarkdata
-
  
  
  if(bookmarks === undefined){
@@ -147,6 +163,10 @@ let color = {
          
          <div className='results'>
            {sort.map(item => {
+          let bands = item.tags.map(z => {
+           return <IoIosBookmark style={{color: `${colors[z]}`}}/>
+           })
+           
             let total = item.likes + item.dislikes
             let per = Math.floor(100 * item.likes / total)
             let NaN = 0
@@ -154,18 +174,20 @@ let color = {
              return (
                <Link to={"/discover/" + item._id}>
                  <div className='results-item' key={item.id} >
+                  <div className='results-item-left'>{bands}</div>
+                  <div className='results-item-right'>
                   <div className='upper'>
-                     <p>{per} %</p>
+                     <p> <BiTrendingUp/> {per} %</p>
                      <h1>{item.title}</h1>
-                     <IoIosBookmark style={{ color: "blue", backgroundSize: 'cover' }} />
                   </div>
-                  
                    <h3>{item.preview}</h3>
+                   </div>
                  </div>
                </Link>
              )
            })}
          </div>
+         <Link to={"/newbookmark"}><AiFillPlusCircle className='float-create'/></Link>
          {data.length === 0 && <span>Nothing found matching '{text}'</span>}
        </div>
 
