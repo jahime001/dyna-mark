@@ -79,17 +79,9 @@ export default function NewBookmark() {
 
   return (
     <div>
-      {/* <div className='bookmark-img' >
-        
-      </div> */}
       <h1 className='create'>Create a bookmark of your favorite resource below!
         <img src={bookmark} />
         </h1>
-      {/* <h2>Add your <span2>favorite</span2> resource here:</h2> */}
-
-    <div className='newbookmark'>
-      <h2>Add your <span>favorite</span> resource here:</h2>
-
       <form onSubmit={handleSubmit}>
         <input
           className="text-field"
