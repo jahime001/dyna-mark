@@ -33,12 +33,6 @@ export default function NewBookmark() {
 
   const navigate = useNavigate()
 
-  let newTags = []
-  function handleTags(e) {
-    e.preventDefault()
-
-  }
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log(JSON.stringify({
