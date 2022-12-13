@@ -25,12 +25,12 @@ export default function NewBookmark() {
   const [preview, setPreview] = useState('')
   const [description, setDescription] = useState('')
   const [link, setLink] = useState('')
-  const [tags, setTags] =useState([])
+  const [tags, setTags] = useState([])
   const [message, setMessage] = useState('')
   const [modalOpen, setModalOpen] = useState(false);
 
   const navigate = useNavigate()
-  
+
   let newTags = []
   function handleTags(e) {
     e.preventDefault()
@@ -55,27 +55,27 @@ export default function NewBookmark() {
         link: link,
         tags: tags
       }
-    const res = await axios.post('https://dyna-mark.fly.dev/api/bookmark/', data)
-    .then(function (response) {
-      console.log(response)
-      console.log('Resource was created succesfully');
-      setMessage('Resource was created succesfully')
-    })
-    .catch(function (error) {
-      console.log(error);
-      console.log('Some error occured')
-      setMessage('Some error occured')
-    });
-    navigate(-1)
-  } catch(err) {}
-  setTitle('')
-  setPreview('')
-  setDescription('')
-  setLink('')
-  setTags('')
+      const res = await axios.post('https://dyna-mark.fly.dev/api/bookmark/', data)
+        .then(function (response) {
+          console.log(response)
+          console.log('Resource was created succesfully');
+          setMessage('Resource was created succesfully')
+        })
+        .catch(function (error) {
+          console.log(error);
+          console.log('Some error occured')
+          setMessage('Some error occured')
+        });
+      navigate(-1)
+    } catch (err) { }
+    setTitle('')
+    setPreview('')
+    setDescription('')
+    setLink('')
+    setTags('')
 
-  
-}
+
+  }
 
 
   return (
@@ -83,59 +83,63 @@ export default function NewBookmark() {
       <h2>Add your <span>favorite</span> resource here:</h2>
       <form onSubmit={handleSubmit}>
         <input
+          className="text-field"
           type='text'
           value={title}
           placeholder='Enter the title of the website'
           onChange={(e) => setTitle(e.target.value)}
         />
         <br />
-        
-          <input
+
+        <input
+          className="text-field"
           type='preview'
           value={preview}
           placeholder='Enter a preview of the website'
           onChange={(e) => setPreview(e.target.value)}
-          
-          />
-       
+
+        />
+
         <br />
         <input
+         className="text-field"
           type='description'
           value={description}
           placeholder='Enter description of the website'
           onChange={(e) => setDescription(e.target.value)}
         />
-        
-        
+
+
         <br />
         <input
+          className="text-field"
           type='link'
           value={link}
           placeholder='Enter website link'
           onChange={(e) => setLink(e.target.value)}
         />
         <br />
-        <input 
-          className='Tag'
+        <input
+          className='Tag text-field' 
           type='tags'
           value={tags}
           placeholder='Enter tags'
           onChange={(e) => setTags(e.target.value)}
         >
         </input>
-        <button 
-        className='Add'
-        onClick = {handleTags}
+        <button
+          className='Add'
+          onClick={handleTags}
         >Add</button>
         <br />
         <div></div>
         <button type='submit'>Create</button>
-        <div className='message'>{message ? <p>{message}</p> : null }</div>
+        <div className='message'>{message ? <p>{message}</p> : null}</div>
       </form>
       <br />
-      <button className='help' onClick={setModalOpen}>Help <FaInfoCircle/></button>
+      <button className='help' onClick={setModalOpen}>Help <FaInfoCircle /></button>
       <Modal
-      
+
         isOpen={modalOpen}
         onRequestClose={() => setModalOpen(false)}
         style={customStyles}

@@ -2,7 +2,9 @@ import { React, Component, useState, useEffect } from 'react'
 import './Discover.css'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import { IoIosBookmark } from "react-icons/io";
+import scope from '../../assets/scope.png'
+import open from '../../assets/open.png'
 export default function Discover({bookmarks}) {
   console.log(bookmarks)
   // const [bookmarks, setBookmarks] = useState()
@@ -105,6 +107,13 @@ useEffect(() => {
       )
     })
  
+    ////color
+let color = {
+  "red": "red"
+}
+
+
+    /////
  ////////////bookmarkdata
 
  
@@ -116,28 +125,37 @@ useEffect(() => {
    if (sort) {
      return (
        <div className='discover-container'>
-         Search: <input
-           className='find'
-           type='text'
-           placeholder='Type to search...'
-           value={text}
-           onChange={e => searchChange(e.target.value)}
-         />
+        <div className='find'>
+           {/* <img src={open} alt="" className='open' /> */}
+           <select name='tags' className='dropdown' onChange={(e) => {
+             e.preventDefault()
+             filterMark(e.target.value)
+           }}>
+            <option value='All'>All</option>
+            {dropdown}
+            </select>
+ <input
+             className='search'
+             type='text'
+             placeholder='Type to search...'
+             value={text}
+             onChange={e => searchChange(e.target.value)}
+           />
+           <img src={scope} alt="" className='scope'/>
+           </div>
          <p>You are currently searching in the <em><b>{currentSearch}</b></em> catagory</p>
-         <select name='tags' className='dropdown' onChange={(e) => {
-           e.preventDefault()
-
-           filterMark(e.target.value)
-         }}><option value='All'>All</option>{dropdown}</select>
-
-
-         <div>
+         
+         <div className='results'>
            {sort.map(item => {
              return (
                <Link to={"/discover/" + item._id}>
-                 <div className='results' key={item.id} >
-                   <h1>{item.title}</h1>
-                   <h2>{item.preview}</h2>
+                 <div className='results-item' key={item.id} >
+                  <div className='upper'>
+                     <h1>{item.title}</h1>
+                     <IoIosBookmark style={{ color: "blue", backgroundSize: 'cover' }} />
+                  </div>
+                  
+                   <h3>{item.preview}</h3>
                  </div>
                </Link>
              )
