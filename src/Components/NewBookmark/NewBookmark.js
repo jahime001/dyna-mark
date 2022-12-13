@@ -4,6 +4,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import Modal from "react-modal";
 import { FaInfoCircle } from "react-icons/fa"
+import bookmark from '../../assets/Bookmark.png'
 
 const customStyles = {
   content: {

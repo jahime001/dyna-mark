@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 .about-container {
-    margin-top: 300px;
+    margin-top: 150px;
     height: 200vh;
     display: flex;
     flex-direction: column;
@@ -38,20 +38,20 @@
 .about h2 {
     padding-top: 2rem;
 }
-.follow {
-    
-}
 a.anchor{
     text-decoration: none;
     font-family: 'DM Sans', sans-serif;
     font-size: 2rem;
 }
-a:link {
+a.anchor:link {
     color: black;
 }
-a:visited {
+a.anchor:visited {
     color: black;
 }
-a:hover {
-    color: #E42EA6;
+a.anchor:hover {
+    color: #F5C448;
+}
+.follow img {
+    height: 500px;
 }
