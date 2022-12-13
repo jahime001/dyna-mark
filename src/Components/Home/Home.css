@@ -5,121 +5,72 @@
 .home {
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     flex-direction: column;
     font-family: 'DM Sans', sans-serif;
     color: var(--text-secondary);
     background-color: var(--text-secondary);
+    width: 100%;
+}
+.home-upper{
+    height: 90vh;
+    display: flex;
 }
 
 .welcome{
     height: 90vh;
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* border: 10px solid blue; */
 }
-.welcome img{
-    background-position: fill;
+.welcome-right{
+    /* border: 1px solid red; */
+    height: 90vh;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.welcome-right img{
+   height: 700px;
 }
 
 .welcome h1{
     font-size: 80px;
-    margin-top: 10px;
-    margin-left: -900px;
+    /* margin-top: 10px; */
+    /* margin-left: -900px; */
     color: var(--text-primary);
+    /* border: 1px solid red; */
 }
 .welcome h3{
-    font-size: 30px;
-    margin-top: -70px;
-    margin-left: -900px;
+    /* margin-left: -900px; */
     color: var(--text-primary);
+    /* border: 1px solid red; */
+    font-size: 60px;
 }
 .welcome p {
-    margin-top: 110px;
     font-size: 30px;
     color: var(--text-primary);
     font-style: italic;
-    /* border: 1px solid; */
-    height: 200px;
-    width: 400px;
-    margin-left: -900px;
+    text-align: center;
+    /* border: 1px solid red; */
+
+
     
 }
 span{
     color: rgb(239, 153, 48);
 }
-.discover{
-    border: 1px solid;
-    width: 200px;
-    height: 75px;
-    display: flex;
-    justify-content: center;
-    /* background-color: aliceblue; */
-    border-radius: 20px;
-    align-items: center;
-    margin-left: -900px;
-}
-.discover a{
-    font-size: 40px;
-    font-weight: 100;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
-
-.discover {
-    color: #FFF;
-    border: 4px solid #000;
-    box-shadow: 0px 0px 0px 1px #000 inset;
-    /* background-color: #000; */
-    overflow: hidden;
-    position: relative;
-    transition: all 0.3s ease-in-out;
-}
-
-.discover:hover {
-    border: 4px solid #666;
-    background-color: #FFF;
-    box-shadow: 0px 0px 0px 4px #EEE inset;
-    cursor: pointer;
-}
 
 
-.discover a {
-    transition: all 0.2s ease-out;
-    z-index: 2;
-}
 
-.discover:hover a {
-    color: #333;
-    cursor: pointer;
-}
+
+
+
+
 
 /*highlight*/
-.discover:after {
-    background: #FFF;
-    border: 0px solid #000;
-    content: "";
-    height: 155px;
-    left: -75px;
-    opacity: .8;
-    position: absolute;
-    top: -50px;
-    -webkit-transform: rotate(35deg);
-    transform: rotate(35deg);
-    width: 50px;
-    transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
-    /*easeOutCirc*/
-    z-index: 1;
-}
-
-.discover:hover:after {
-    background: #FFF;
-    border: 20px solid #000;
-    opacity: 0;
-    left: 120%;
-    -webkit-transform: rotate(40deg);
-    transform: rotate(40deg);
-}
 
