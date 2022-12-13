@@ -78,10 +78,17 @@ export default function NewBookmark() {
 
 
   return (
-    <div>
-      <h1 className='create'>Create a bookmark of your favorite resource below!
+    <div className='bookmark-container'>
+      <div className='newbookmark-upper'>
         <img src={bookmark} />
+        <h1 className='create'> Create a <span className='create-message'>bookmark</span>  of your <span className='create-message'>favorite</span> resource below!
+        
         </h1>
+      </div>
+      <div className='newbookmark-lower'>
+        <p>
+          Before submitting, please follow intructions found when "Help" button is clicked down below
+        </p>
       <form onSubmit={handleSubmit}>
         <input
           className="text-field"
@@ -130,7 +137,7 @@ export default function NewBookmark() {
         </input>
         <br />
         <div></div>
-        <button type='submit'>Create</button>
+        <button className='submit' type='submit'>Create</button>
         <div className='message'>{message ? <p>{message}</p> : null}</div>
       </form>
       <br />
@@ -170,6 +177,7 @@ export default function NewBookmark() {
 
         <button onClick={() => setModalOpen(false)}>Close Modal</button>
       </Modal>
+    </div>
     </div>
   )
 }

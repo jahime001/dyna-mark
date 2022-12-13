@@ -21,7 +21,7 @@
 input::placeholder{
     color: #cfcfcf;
 }
-span2 {
+span.create-message {
     color: #67B772;
 }
 
@@ -35,37 +35,49 @@ button {
     text-align: center;
     font-family: 'DM Sans', sans-serif;
 }
-button:hover {
-    background-color: #95C3F5;
+button:hover.submit {
+    background-color: #FFEF5A;
+}
+button:hover.help {
+    background-color: #FFEF5A;
 }
 .message {
     font-size: 1.2rem;
     text-decoration: center;
     color: #36a936;
 }
-
-h2 {
-    padding-top: 6rem;
-    font-family: 'DM Sans', sans-serif;
+.bookmark-container {
+    width: 100%;
+    height: 150vh;
 }
-/* .bookmark-img img {
+.newbookmark-upper img {
+    height: 550px;
+}
+.newbookmark-upper {
     height: 600px;
-    margin-bottom: none;
-    margin-right: 40rem;
-    padding-top: 6rem;
-} */
-.create{
+    width: 100%;
+    margin-top: 80px;
     display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 
-h1 {
+.newbookmark-upper h1 {
+    text-align: center;
     display: flex;
     align-items: center;
+    width: 50%;
+    font-size: 4rem;
 }
-
-h1 img {
-    margin: 0 0.5em;
-    height: 13em;
-    padding-top: 3rem;
+.newbookmark-lower {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+.create {
+    display: flex;
+    flex-direction: column;
 }

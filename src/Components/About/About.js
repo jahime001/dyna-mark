@@ -26,13 +26,13 @@ export default function About() {
     <div className='about-container'>
       <div>
         <div className='about'>
-          <div className='art' style={{ backgroundImage: `url(${about})`, backgroundPosition: "center" }}>
+          <div style={{ backgroundImage: `url(${about})`, backgroundPosition: "center" }}>
           </div>
 
-          <h1>About the creators of <span>Dyna-Mark</span></h1>
-          <h2>We are students in a Software Engineering Bootcamp that were given the task to create a full stack application. Going through several ideas we decided to go with one idea we thought would be the most beneficial to new students! Big shoutout to our TA's for helping us with this Dynamic Bookmark idea.
+          <h1>About the creators of <span> Dyna-Mark</span></h1>
+          <h2>We are students at General Assembly, that were given the task to create a full stack application. Going through several ideas we decided to go with one idea we thought would be the most beneficial to new students! Big shoutout to our TA's for helping us with this Dynamic Bookmark idea.
             <br />
-            We hope that this benefits those on their journey to become a Software Engineer, because we know how hard it can be but with the proper resources and determination YOU CAN DO IT!
+            We hope that this benefits those on their journey to become a Software Engineer, because we know how hard it can be but with the proper resources and determination <span>YOU CAN DO IT!</span>
           </h2>
 
         </div>
