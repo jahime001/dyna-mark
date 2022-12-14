@@ -55,6 +55,18 @@
     font-size: 20px;
     margin: 20px;
 }
+.boxes a{
+    text-decoration: none;
+}
+.box-button{
+    border: 1px solid;
+    width: 100px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-color: black;
+    margin-bottom: 0;
+}
 
 @media (min-device-width: 320px) and (max-device-width: 812px) {
     .Info{
