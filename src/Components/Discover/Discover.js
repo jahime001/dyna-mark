@@ -1,13 +1,11 @@
 import { React, Component, useState, useEffect } from 'react'
 import './Discover.css'
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import { IoIosBookmark } from "react-icons/io";
 import { BiTrendingUp } from "react-icons/bi";
 import { AiFillPlusCircle } from "react-icons/ai";
 import { BsInfoCircleFill } from "react-icons/bs";
 import scope from '../../assets/scope.png'
-import open from '../../assets/open.png'
 import Modal from "react-modal";
 
 const customStyles = {
@@ -168,7 +166,6 @@ codeeditor: "#870855"
            
             let total = item.likes + item.dislikes
             let per = Math.floor(100 * item.likes / total)
-            let NaN = 0
             console.log(per)
              return (
                <Link to={"/discover/" + item._id}>
@@ -176,7 +173,10 @@ codeeditor: "#870855"
                   <div className='results-item-left'>{bands}</div>
                   <div className='results-item-right'>
                   <div className='upper'>
-                     <p> <BiTrendingUp/> {per} %</p>
+                     <p> <BiTrendingUp/> {(isNaN(per))?
+                      0:
+                     per
+                    } %</p>
                      <h1>{item.title}</h1>
                   </div>
                    <h3>{item.preview}</h3>

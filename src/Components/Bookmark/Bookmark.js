@@ -4,7 +4,6 @@ import { useParams, useNavigate } from 'react-router'
 import axios from 'axios'
 import { FiThumbsUp } from 'react-icons/fi';
 import { FiThumbsDown } from 'react-icons/fi';
-import { MdDelete } from 'react-icons/md';
 import { RiExternalLinkFill } from 'react-icons/ri';
 import { BsFillXCircleFill } from 'react-icons/bs';
 import { BsFillCircleFill } from 'react-icons/bs';

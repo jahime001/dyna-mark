@@ -4,8 +4,6 @@ import Discover from './Components/Discover/Discover';
 import Home from './Components/Home/Home';
 import Nav from './Components/Nav/Nav';
 import About from './Components/About/About';
-import Footer from './Components/Footer/Footer';
-import Info from './Components/Info/Info';
 import Bookmark from './Components/Bookmark/Bookmark';
 
 import useLocalStorage from 'use-local-storage'
@@ -29,7 +27,6 @@ function App() {
     getBookmarks();
   }, [])
 
-   //Setup for Dark mode begins here
    const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
    const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
 

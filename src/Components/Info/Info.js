@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './Info.css'
 import bx1 from '../../assets/Box1.png'
 import bx2 from '../../assets/Box2.png'
-import bx3 from '../../assets/Box3.png'
 import { Link } from 'react-router-dom'
 
 export default function Info() {
