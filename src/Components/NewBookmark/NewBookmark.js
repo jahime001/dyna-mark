@@ -76,10 +76,15 @@ export default function NewBookmark() {
   return (
     <div className='bookmark-container'>
       <div className='newbookmark-upper'>
-        <img src={bookmark} />
-        <h1 className='create'> Create a <span className='create-message'>bookmark</span>  of your <span className='create-message'>favorite</span> resource below!
+        <div>
+          <img src={bookmark} />
+        </div>
+        <div>
+          <h1 className='create'> Create a <span className='create-message'>bookmark</span>  of your <span className='create-message'>favorite</span> resource below!
         
         </h1>
+        </div>
+        
       </div>
       <div className='newbookmark-lower'>
         <p>

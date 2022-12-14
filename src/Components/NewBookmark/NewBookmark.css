@@ -60,8 +60,19 @@ button:hover.help {
     width: 100%;
     margin-top: 80px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+}
+.newbookmark-upper:nth-child(1) {
+    margin-left: 90px;
+}
+
+.newbookmark-upper > * {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .newbookmark-upper h1 {
