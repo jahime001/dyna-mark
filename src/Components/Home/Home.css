@@ -66,7 +66,29 @@ span{
 }
 
 
-
+@media (min-device-width: 320px) and (max-device-width: 812px) {
+    .home{
+        width: 100%;
+    }
+        .welcome-right img {
+            height: 0;
+        }
+    .welcome-right{
+        width: 0;
+        height: 0;
+    }
+    .home-upper{
+        flex-direction: column;
+        /* border: 1px solid blue; */
+        height: 100vh;
+    }
+    .welcome{
+        text-align: center;
+        margin-top: 40px;
+        /* border: 1px solid blue; */
+        width: 100%;
+    }
+}
 
 
 
