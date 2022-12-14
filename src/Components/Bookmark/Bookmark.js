@@ -45,7 +45,6 @@ const [booke, setBooke] = useState([])
  async function chosenBookmark(){
    let results = await axios.request(options2)
    setBooke(results.data)
-   console.log(results)
   }
   useEffect(() =>{
     chosenBookmark()
@@ -62,16 +61,13 @@ const [booke, setBooke] = useState([])
       },
     })
       .then(function (response) {
-        console.log(response);
       })
       .catch(function (error) {
-        console.log(error);
       });
   
     // setBooke(data)
     chosenBookmark()
     setChanged(data.likes)
-    console.log(booke)
   }
   function handleDislike() {
     const data = {
@@ -84,16 +80,13 @@ const [booke, setBooke] = useState([])
       },
     })
       .then(function (response) {
-        console.log(response);
       })
       .catch(function (error) {
-        console.log(error);
       });
 
     // setBooke(data)
     chosenBookmark()
     setChanged(data.dislikes)
-    console.log(booke)
   }
 
 
