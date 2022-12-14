@@ -83,7 +83,7 @@ useEffect(() => {
     }
   }
 
-  ///
+
 
   function filterMark(tag) {
     if(tag === 'All'){
@@ -91,7 +91,7 @@ useEffect(() => {
       setCurrentSearch(tag)
     }else{
       let tagSort = bookmarks.filter((bookmark) => {
-        // console.log(bookmark.tags.includes(tag))
+
         return bookmark.tags.includes(tag)
       })
       // console.log(tagSort)
@@ -100,8 +100,7 @@ useEffect(() => {
     }
   
   }
-  // console.log(sort)
-  // references.filter(filterMark)
+ 
  
     let dropdown = tagList.map(item => {
       return (
