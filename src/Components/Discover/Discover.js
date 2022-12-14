@@ -111,22 +111,22 @@ useEffect(() => {
  
     ////color
 let colors = {
-  Css: "#0000ff",
-Generator: "#998714",
-Documentation: "#ff0000",
-MongoDB: "#589636",
-Firebase: "#F5820D",
-// Front-End: "",
-// Back-End: "",
-Express: "#a9b2af",
-Api: "#4e00af",
-Practice: "#00476c",
-Javascript: "#ffff00",
-Reads: "#006c6f",
-W3Schools: "#3cb371",
-Html: "#e34c26",
-React: "#61dbfb"
-// Code Editor: ""
+  css: "#0000ff",
+generator: "#998714",
+documentation: "#ff0000",
+mongodb: "#589636",
+firebase: "#F5820D",
+frontend: "#ab7441",
+backend: "#1b716f",
+express: "#a9b2af",
+api: "#4e00af",
+practice: "#00476c",
+javascript: "#ffff00",
+reads: "#006c6f",
+w3Schools: "#3cb371",
+html: "#e34c26",
+react: "#61dbfb",
+codeeditor: "#870855"
 }
 
 

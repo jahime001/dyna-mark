@@ -55,3 +55,47 @@
     font-size: 20px;
     margin: 20px;
 }
+.boxes a{
+    text-decoration: none;
+}
+.box-button{
+    border: 1px solid;
+    width: 100px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-color: black;
+    margin-bottom: 0;
+}
+
+@media (min-device-width: 320px) and (max-device-width: 812px) {
+    .Info{
+        margin-top: 100px;
+        /* border: 5px solid red; */
+        height: 200vh;
+        justify-content: space-evenly;
+    }
+    .boxes{
+        flex-direction: column;
+    }
+        .boxes>* {
+            width: 80%;
+            margin-top: 30px;
+            border: 1px solid;
+            height: 600px;
+            overflow: scroll;
+            /* font-size: 5px; */
+        }
+                .boxes>* p {
+                    margin: 0;
+                    text-align: center;
+                }
+                 .boxes>* h1 {
+                     margin: 0;
+                     text-align: center;
+                 }
+        .hide{
+            opacity: 1;
+            margin: 0;
+        }
+}
