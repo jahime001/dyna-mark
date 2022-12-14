@@ -36,13 +36,6 @@ export default function NewBookmark() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    (JSON.stringify({
-      title: title,
-      preview: preview,
-      description: description,
-      link: link,
-      tags: tags
-    }));
 
     try {
       const data = {
