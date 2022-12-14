@@ -22,14 +22,12 @@ function App() {
   }
   async function getBookmarks() {
     let results = await axios.request(options);
-    console.log(results.data)
     setBookmarks(results.data)
   }
 
   useEffect(() => {
     getBookmarks();
   }, [])
-  console.log('this is app.js')
 
    //Setup for Dark mode begins here
    const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -39,8 +37,6 @@ function App() {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme)
   }
-
-  console.log(theme, 'this is the theme')
 
   return (
     <div className='app' data-theme={theme}>

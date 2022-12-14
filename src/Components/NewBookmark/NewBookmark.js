@@ -36,7 +36,7 @@ export default function NewBookmark() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(JSON.stringify({
+    (JSON.stringify({
       title: title,
       preview: preview,
       description: description,
@@ -56,13 +56,9 @@ export default function NewBookmark() {
       }
       const res = await axios.post('https://dyna-mark.fly.dev/api/bookmark/', data)
         .then(function (response) {
-          console.log(response)
-          console.log('Resource was created succesfully');
           setMessage('Resource was created succesfully')
         })
         .catch(function (error) {
-          console.log(error);
-          console.log('Some error occured')
           setMessage('Some error occured')
         });
       navigate(-1)
