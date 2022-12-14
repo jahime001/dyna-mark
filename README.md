@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Dyna-Mark App
+### Creators:
+Bibhor Gurung,
+Jahime Cameau,
+Morgan Arancibia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dyna-Mark is an app that was created to help dynamically bookmark essential websites to help you become a better programmer. Everyone has needed or wanted the best references to go to when learning how to code, this app will provide users with the ability to find bookmarks that have been added by key word searches like 'javascript, 'html', 'css' and so much more! Here users will also be able to add bookmarks of their own to the website, so it too becomes discoverable and can be viewed by those who can benefit from it!
 
-## Available Scripts
+## Project Links
+- [GitHub Back-end Repo](https://github.com/jahime001/dyna-mark-api)
+- [Deployed Front-end](https://dyna-mark.vercel.app/discover)
+- [Deployed Back-end](https://dyna-mark.fly.dev/api/bookmark)
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies used for this app
+- [![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)]()
+- [![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)](https://html.com/)
+- [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+- [![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)]()
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Vercel:
+We used vercel to deploy the front-end of the Dyna-Mark app, vercel is a simple way to deploy your site! It is free and allows you to connect to your GitHub so you are then able to directly link your Github repos. After they are linked Vercel takes it from there and deploys your wesbite!
 
-### `npm test`
+## Installation
+1. Fork and clone this repository in any folder you feel works best
+2. `cd` into that repository
+3. Run `npm i` to download all required dependencies
+4. Run `npm start` to run localhost
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Wireframes
+Before
+![Screen Shot 2022-12-07 at 8 15 03 PM](https://user-images.githubusercontent.com/114137772/207626974-ffd16b55-e422-42d8-a845-c7807e764dce.png)
 
-### `npm run build`
+After
+![Screen Shot 2022-12-14 at 7 47 02 AM](https://user-images.githubusercontent.com/114137772/207627480-7c61af58-4e58-4d49-bf64-53f9f2031d9e.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## MVP
+- As a user, I want to be able to add bookmarks to useful coding websites
+- As A User, I want to be able to add useful coding websites
+- As a user I want to be able to see description of these websites
+- As a user, I want to be able to see tags associated with the website to help find what I am looking for
+- As a user, I want to be able to like or dislike a website
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Post MVP Example
+- Made it so the tags on the bookmarks could be color coded, to be able to clearly distinguish how many tags there are on a bookmark
+- Included direct links to our LinkedIns and GitHubs
+- Added a dark mode, to switch from light mode
 
-### `npm run eject`
+## What to add in the future...
+- Add user authentication 
+- Where users can log in and veiw their own bookmarks or add bookmarks to their account to refer to
+- Display all the most liked references so that is what users can see first, and hopefully find the most helpful resource
+- Adding a comment section for the bookamrks
+- Add a video preview to the bookamrks so users can see what to expect before clicking on the link!
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Project management
+Our team got together to have standups and standowns for about 2-5 minutes at the beginning and end of each day. This helped set us up to know what we need to get down and appreciate what has been done! We followed a typical Git Flow to insure no merge conflicts occur when commiting for this project. This also entailed setting up different working branches to insure we would not be working on the same comonent or affecting anyone else's work! We collaborated accordingly and made sure everyone had enough to do, or got the supprot that was needed to move forward in a timely manner.
+###
+![Screen Shot 2022-12-14 at 8 43 38 AM](https://user-images.githubusercontent.com/114137772/207642288-f9f5241c-aae0-4b68-8535-01b014f46e8a.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Issues and Resolutions
+- We came accross an issue with our Discover component where the page would try to load before the API could grab the data. To resolve this we changed how we filter the data and added a handle
+- When trying to work with dark mode it messed with our CSS, but we peer programmed to get this sorted out and stlyed properly!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Resources:
+- [Media Queries](https://www.w3schools.com/css/css_rwd_mediaqueries.asp)
+- [Darkmode](https://css-tricks.com/easy-dark-mode-and-multiple-color-themes-in-react/)
+- [Whimsical](https://whimsical.com)
+- [React Icons](https://react-icons.github.io/react-icons)
+- [Canva](https://www.canva.com/)
