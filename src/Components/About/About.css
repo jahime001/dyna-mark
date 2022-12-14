@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--text-primary);
+    color: var(--background);
     background-color: var(--text-secondary);
 }
 
@@ -28,6 +28,7 @@
     
 }
 
+.boxes2
 .art2{
     width: 100%;
     height: 25%;
@@ -61,12 +62,11 @@ a.anchor:hover {
     align-items: center;
 }
 .about-container h1 {
-    color: var(--text-primary);
+    color: black;
     text-align: center;
     width: 100%;
 }
 .about-container h2 {
-
     color: black;
     width: 100%;
     display: flex;
@@ -160,12 +160,7 @@ a.anchor:hover {
         align-items: center;
         padding: 0 20px;
     }
-
-    color: var(--text-primary);
 }
 
-.heading {
-    color: var(--text-secondary);
 
-}
 
