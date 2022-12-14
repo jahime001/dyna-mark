@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
 .about-container {
-    margin-top: 150px;
     height: 400vh;
     width: 100%;
     display: flex;
@@ -63,9 +62,10 @@ a.anchor:hover {
     align-items: center;
 }
 .about-container h1 {
-    color: black;
+    color: var(--text-primary);
     text-align: center;
     width: 100%;
+    margin-top: 150px;
 }
 .about-container h2 {
     color: var(--text-primary);
@@ -74,6 +74,7 @@ a.anchor:hover {
     align-items: center;
     margin: 0;
     flex-direction: column;
+    text-align: center;
 }
 .about {
     margin: 0 20px;
