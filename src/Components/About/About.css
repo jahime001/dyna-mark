@@ -68,9 +68,13 @@ a.anchor:hover {
 }
 .about-container h2 {
 
-    color: black;
+    color: var(--text-primary);
     width: 100%;
     text-align: center;
+}
+.heading {
+    color: var(--text-secondary);
+
 }
 
 /* @media only screen and (max-width: 320px) {
@@ -137,6 +141,7 @@ a.anchor:hover {
     }
 }
 
+
 @media only screen and (max-width: 376px) {
     .about-container h2 {
         margin: 0;
@@ -177,11 +182,4 @@ a.anchor:hover {
         align-items: center;
         padding: 0 20px;
     }
-
-    color: var(--text-primary);
-}
-
-.heading {
-    color: var(--text-secondary);
-
 }
