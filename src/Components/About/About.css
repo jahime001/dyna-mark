@@ -67,11 +67,11 @@ a.anchor:hover {
     width: 100%;
 }
 .about-container h2 {
-
     color: var(--text-primary);
     width: 100%;
     text-align: center;
 }
+
 .heading {
     color: var(--text-secondary);
 
