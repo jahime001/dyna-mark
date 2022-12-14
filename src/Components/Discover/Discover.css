@@ -22,14 +22,14 @@
 }
 
 .dropdown{
-    /* margin-top: 200px; */
     padding: 10px;
     font-size: 20px;
     font-family: 'DM Sans', sans-serif;
+    border-radius: 10px;
+        box-shadow: 0px 5px 10px;
 }
 
 .results{
-    /* border: 1px solid; */
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -61,7 +61,6 @@
 
 }
 .find{
-    /* border: 1px solid; */
     display: flex;
     width: 100%;
     justify-content: space-evenly;
@@ -85,11 +84,8 @@
     justify-content: space-around;
 }
 .scope{
-    /* border: 1px solid; */
     height: 300px;
     float: right;
-    /* margin-left: 70%; */
-    /* position: absolute; */
 }
 
 .upper h1 {
@@ -101,12 +97,14 @@
 }
 
 .results-item-left{
-    /* border: 1px solid; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 10%;
+    box-shadow: inset 9px 10px 51px 7px rgba(0, 0, 0, 0.3);
+    background: rgb(30, 135, 241);
+        background: linear-gradient(324deg, rgba(30, 135, 241, 1) 0%, rgba(235, 125, 216, 1) 100%);
 }
 
 .results-item-right{
@@ -125,6 +123,18 @@
         text-align: center;
         box-shadow: 2px 2px 3px #999;
 }
+.float-create2{
+    position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 120px;
+        right: 40px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(30, 135, 241);
+        border-radius: 50px;
+        text-align: center;
+        box-shadow: 2px 2px 3px #999;
+}
 .float-create:hover{
     cursor: pointer;
     background-color: rgb(30, 135, 241);
@@ -132,7 +142,19 @@
     animation-name: rotate-center;
     animation-duration: 1s;
 }
-
+.float-create2:hover {
+    cursor: pointer;
+    background-color: rgb(30, 135, 241);
+    color: white;
+    animation-name: rotate-center;
+    animation-duration: 1s;
+}
+.legend{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'DM Sans', sans-serif;
+}
 @keyframes rotate-center {
     0% {
         -webkit-transform: rotate(0);
@@ -159,9 +181,18 @@
     .scope{
         margin: 0;
         height: 200px;
-        margin-top: 500px;
+        margin-top: 30px;
     }
     .find{
         flex-direction: column;
+        justify-content: center;
+        height: 80vh;
+        
+    }
+    .search{
+        width: 50%;
+    }
+    .dropdown{
+        width: 50%;
     }
 }

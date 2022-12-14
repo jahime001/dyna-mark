@@ -2,8 +2,6 @@
     width: 100%;
     height: 80px;
     display: flex;
-    /* justify-content: space-between; */
-    /* border: 1px solid; */
     position: fixed;
         top: 0;
         z-index: 1;
@@ -19,7 +17,6 @@
 }
 .nav-icons{
     right: 0;
-    /* border: 1px solid blue; */
     position: fixed;
     width: 90px;
     height: 10%;
@@ -57,13 +54,12 @@
 }
 
 .NavLinks a:hover{
-    text-decoration: underline;
-    color: rgb(239, 153, 48);
+    color: rgb(255, 255, 255);
+    background-color: gray;
 }
 
 .NavLinks.active{
     width: 250px;
-    /* position: relative; */
 }
 
 .logo{
@@ -89,12 +85,11 @@
 
   @media (min-device-width: 320px) and (max-device-width: 812px){
     .NavBar{
-        /* background-color: red; */
         width: 100%;
     }
     .Nav-icons{
                 top: 0;
-                /* background-color: red; */
+            
                 
          
     }

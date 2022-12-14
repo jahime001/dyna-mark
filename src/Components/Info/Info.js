@@ -33,7 +33,7 @@ window.addEventListener("scroll", handleShow);
                   <div className='art' style={{ backgroundImage: `url(${bx2})`, backgroundPosition: "center" }}>
                  </div>
                   <h1>Share Your Favorites!</h1>
-                  <p>Share resources/websites that helped you while coding. Add tags </p>
+                  <p>Share resources/websites that helped you while coding. Whether thats Documentation, good reads, css code generators ;), cool SVG's </p>
                   <Link to={"/newbookmark"}><div className='box-button'>Create!</div></Link>  
               </div>
           </div>

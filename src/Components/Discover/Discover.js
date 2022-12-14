@@ -5,39 +5,45 @@ import axios from 'axios';
 import { IoIosBookmark } from "react-icons/io";
 import { BiTrendingUp } from "react-icons/bi";
 import { AiFillPlusCircle } from "react-icons/ai";
+import { BsInfoCircleFill } from "react-icons/bs";
 import scope from '../../assets/scope.png'
 import open from '../../assets/open.png'
+import Modal from "react-modal";
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    backgroundColor: "white",
+    width: 400,
+    height: 200,
+
+  },
+};
+
+
 export default function Discover({bookmarks}) {
-  console.log(bookmarks)
-  // const [bookmarks, setBookmarks] = useState()
+const [modalOpen, setModalOpen] = useState(false);
   const [loading, setLoading] = useState(false)
-  // const options = {
-  //   method: 'GET',
-  //   url: 'https://dyna-mark.fly.dev/api/bookmark'
-  // }
-  // async function getBookmarks() {
-  //   let results = await axios.request(options);
-  //   console.log(results.data)
-  //   setBookmarks(results.data)
-  // }
-  // useEffect(() => {
-    
-  // }, [loading])
+
  
   
 
- 
-  //map out all references & tags from the api
 
-  let tagList = ['Css', 'Generator', 'Documentation', 'MongoDB', 'Firebase', 'Front-End', 'Back-End', 'Express', 'Api', 'Practice', 'Javascript', 'Reads', 'W3Schools', 'HTML', 'React', 'Code Editor']
 
-  //setting state for filtering
+  let tagList = ['css', 'generator', 'documentation', 'mongoDB', 'firebase', 'frontend', 'backend', 'express', 'api', 'practice', 'javascript', 'Reads', 'W3Schools', 'html', 'react', 'codeeditor']
+
+
   const [sort, setSort] = useState()
   const [currentSearch, setCurrentSearch] = useState()
   
 
 
-  //search bar
+
   const[text, setText] = useState('')
   const [data, setData] = useState([])
 
@@ -47,8 +53,6 @@ export default function Discover({bookmarks}) {
       setSort(bookmarks)
     }
   }
-
-  console.log(data)
 
 useEffect(() => {
   handleData()
@@ -94,7 +98,7 @@ useEffect(() => {
 
         return bookmark.tags.includes(tag)
       })
-      // console.log(tagSort)
+   
       setSort(tagSort)
       setCurrentSearch(tag)
     }
@@ -108,7 +112,7 @@ useEffect(() => {
       )
     })
  
-    ////color
+
 let colors = {
   css: "#0000ff",
 generator: "#998714",
@@ -128,9 +132,6 @@ react: "#61dbfb",
 codeeditor: "#870855"
 }
 
-
-    /////
- ////////////bookmarkdata
  
  
  if(bookmarks === undefined){
@@ -141,7 +142,6 @@ codeeditor: "#870855"
      return (
        <div className='discover-container'>
         <div className='find'>
-           {/* <img src={open} alt="" className='open' /> */}
            <select name='tags' className='dropdown' onChange={(e) => {
              e.preventDefault()
              filterMark(e.target.value)
@@ -187,6 +187,32 @@ codeeditor: "#870855"
            })}
          </div>
          <Link to={"/newbookmark"}><AiFillPlusCircle className='float-create'/></Link>
+        <BsInfoCircleFill className='float-create2' onClick={setModalOpen}/>
+        <Modal
+        isOpen={modalOpen}
+        onRequestClose={() => setModalOpen(false)}
+        style={customStyles}
+      >
+       <div className='legend'>
+        <h1>Keys</h1>
+        <h2>Css <IoIosBookmark style={{color: '#0000ff'}}/></h2>
+        <h2>Generator <IoIosBookmark style={{color: '#998714'}}/></h2>
+        <h2>Documentation <IoIosBookmark style={{color: '#ff0000'}}/></h2>
+        <h2>MongoDB<IoIosBookmark style={{color: '#589636'}}/></h2>
+        <h2>Firebase <IoIosBookmark style={{color: '#F5820D'}}/></h2>
+        <h2>Front End <IoIosBookmark style={{color: '#ab7441'}}/></h2>
+        <h2>Back End <IoIosBookmark style={{color: '#1b716f'}}/></h2>
+        <h2>express <IoIosBookmark style={{color: '#a9b2a'}}/></h2>
+        <h2>Api <IoIosBookmark style={{color: '#4e00af'}}/></h2>
+        <h2>Practice <IoIosBookmark style={{color: '#00476c'}}/></h2>
+        <h2>Javascript <IoIosBookmark style={{color: '#ffff00'}}/></h2>
+        <h2>Reads <IoIosBookmark style={{color: '#006c6f'}}/></h2>
+        <h2>W3Schools <IoIosBookmark style={{color: '#3cb371'}}/></h2>
+        <h2>Html <IoIosBookmark style={{color: '#e34c26'}}/></h2>
+        <h2>React <IoIosBookmark style={{color: '#61dbfb'}}/></h2>
+        <h2>CodeEditor <IoIosBookmark style={{color: '#870855'}}/></h2>
+       </div>
+      </Modal>
          {data.length === 0 && <span>Nothing found matching '{text}'</span>}
        </div>
 

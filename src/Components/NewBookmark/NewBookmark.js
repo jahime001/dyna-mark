@@ -155,24 +155,24 @@ export default function NewBookmark() {
           <p><span2>Preview:</span2> <em>This will be displayed on the bookmark card, it should be short description of the webpage</em></p>
           <p><span2>Description:</span2> <em>What the webpage or resource is about(can be found in the about page if the website)</em></p>
           <p><span2>Link:</span2> <em>Copy and paste links here</em></p>
-          <p><span2>Tags:</span2> <em><b>PLEASE USE TAGS FROM THE LIST BELOW(Copy and Paste)</b></em></p>
+          <p><span2>Tags:</span2> <em><b>PLEASE USE TAGS FROM THE LIST BELOW(Copy and Paste). Seperate tags using a comma!</b></em></p>
           <ul>
-            <li>Css</li>
-            <li>Generator</li>
-            <li>Documentation</li>
-            <li>MonogDB</li>
-            <li>Firebase</li>
-            <li>Front-End</li>
-            <li>Back-End</li>
-            <li>Express</li>
-            <li>Api</li>
-            <li>Practice</li>
-            <li>Javscript</li>
-            <li>Reads</li>
-            <li>W3Schools</li>
-            <li>Html</li>
-            <li>React</li>
-            <li>Code Editor</li>
+            <li>css</li>
+            <li>generator</li>
+            <li>documentation</li>
+            <li>monogdb</li>
+            <li>firebase</li>
+            <li>frontend</li>
+            <li>backend</li>
+            <li>express</li>
+            <li>api</li>
+            <li>practice</li>
+            <li>javscript</li>
+            <li>reads</li>
+            <li>w3schools</li>
+            <li>html</li>
+            <li>react</li>
+            <li>codeeditor</li>
           </ul>
         </div>
 

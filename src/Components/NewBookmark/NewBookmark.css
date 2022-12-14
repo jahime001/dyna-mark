@@ -89,6 +89,7 @@ button:hover.help {
     justify-content: center;
     align-items: center;
     height: 50%;
+    background-color: var(--text-secondary);
 }
 .newbookmark-lower p {
     margin: 0%;
@@ -161,5 +162,8 @@ button:hover.help {
     .newbookmark-lower p {
         display: flex;
         padding: 10px;
+    }
+    .newbookmark-lower{
+        height: 100vh;
     }
 }

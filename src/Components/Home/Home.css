@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
-/* 834 x 1103 */
 
 .home {
     display: flex;
@@ -24,10 +23,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* border: 10px solid blue; */
 }
 .welcome-right{
-    /* border: 1px solid red; */
     height: 90vh;
         width: 50%;
         display: flex;
@@ -35,20 +32,15 @@
         align-items: center;
 }
 .welcome-right img{
-   height: 700px;
+   height: 550px;
 }
 
 .welcome h1{
     font-size: 80px;
-    /* margin-top: 10px; */
-    /* margin-left: -900px; */
     color: var(--text-primary);
-    /* border: 1px solid red; */
 }
 .welcome h3{
-    /* margin-left: -900px; */
     color: var(--text-primary);
-    /* border: 1px solid red; */
     font-size: 60px;
 }
 .welcome p {
@@ -56,13 +48,12 @@
     color: var(--text-primary);
     font-style: italic;
     text-align: center;
-    /* border: 1px solid red; */
 
 
     
 }
 span{
-    color: rgb(239, 153, 48);
+    color: rgb(109, 109, 109);
 }
 
 
@@ -79,20 +70,21 @@ span{
     }
     .home-upper{
         flex-direction: column;
-        /* border: 1px solid blue; */
         height: 100vh;
     }
     .welcome{
         text-align: center;
         margin-top: 40px;
-        /* border: 1px solid blue; */
         width: 100%;
+    }
+    .welcome h1{
+        margin-top: 120px;
+    }
+    .welcome h3{
+        margin-top: -80px;
     }
 }
 
 
 
-
-
-/*highlight*/
 

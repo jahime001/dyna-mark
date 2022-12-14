@@ -60,12 +60,6 @@ const [booke, setBooke] = useState([])
         'content-type': 'application/json',
       },
     })
-      .then(function (response) {
-      })
-      .catch(function (error) {
-      });
-  
-    // setBooke(data)
     chosenBookmark()
     setChanged(data.likes)
   }
@@ -79,12 +73,6 @@ const [booke, setBooke] = useState([])
         'content-type': 'application/json',
       },
     })
-      .then(function (response) {
-      })
-      .catch(function (error) {
-      });
-
-    // setBooke(data)
     chosenBookmark()
     setChanged(data.dislikes)
   }
@@ -112,7 +100,7 @@ const [booke, setBooke] = useState([])
           </div>
           <div className='booke'>
           <h1 className='booke-title'>{booke.title}</h1>
-          <h1>{booke.description}</h1>
+          <h1 className='booke-description'>{booke.description}</h1>
           <a href={booke.link} target='blank'><div className='booke-link'>Visit   <RiExternalLinkFill/></div></a>
               <div className='react'>
             <div className='like'>
@@ -140,7 +128,6 @@ const [booke, setBooke] = useState([])
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type='submit' onClick={deleteBooke}>Delete</button>
-      {/* <button onClick={() => setModalOpen(false)}>Close Modal</button> */}
       </Modal>
       </div>
     )
